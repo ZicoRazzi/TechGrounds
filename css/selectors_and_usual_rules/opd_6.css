@@ -1,0 +1,13 @@
+.container{
+  padding: 10px;
+}
+
+div > h2{
+  color: red;
+}
+section + h4{
+  background-color: yellow;
+}
+section ~ h5{
+  background-color: greenyellow;
+}

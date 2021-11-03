@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS selectors and usual rules</title>
+    <link rel="stylesheet" href="opd_6.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h3>Child selectors</h3>
+      <p>
+        De child (kind) selector, zoals ook staat in de naam, zich alleen richt
+        op kinderen.
+      </p>
+      <p>
+        De syntax voor de "direct child selector" vereist een simpele
+        aanpassing. In plaats van een spatie tussen voorouder en afstammeling
+        zoals in het geval van de descendant selector hebben we nu het groter
+        dan teken (>) tussen ouder ("parent") en kind ("child"). Het > teken mag
+        omgeven worden door één of meer spaties.
+      </p>
+      <p>parent > child</p>
+      <p>
+        Voorbeeld: div > h2 (in dit geval child selector zich richt alleen op h2
+        tag binnen de div tag en niet binnen de section. De kleur van de eerste
+        h2 is rood, de tweede h2 blijft zwart)
+      </p>
+      <p>CSS: div > h2{ color: red; }</p>
+      <img src="/img/Schermafbeelding 2021-11-03 om 10.51.38.png" alt="code" />
+      <div>
+        <h2>title</h2>
+        <section>
+          <h2>subtitel</h2>
+        </section>
+      </div>
+
+      <hr />
+      <h3>Adjacent selectors</h3>
+      <p>
+        Adjacent sibling element-selectors kun je gebruiken om de stijl vast te
+        leggen van een element op een vergelijkbaar niveau (dus geen kind), die
+        direct op elkaar volgen. In de stijlregel wordt tussen de elementen een
+        plusteken (+) geplaatst, naar wens voorafgegaan en gevolgd door één of
+        meer spaties.
+      </p>
+      <p>
+        Voorbeeld: In de onderstaande code krijgt alleen h4 tag die buiten de
+        section staat en direct na section volgt de achtergrondkleur
+      </p>
+      <p>CSS: section + h4{ background-color: yellow; }</p>
+      <img src="/img/Schermafbeelding 2021-11-03 om 11.12.08.png" alt="" />
+      <section>
+        <h4>Tralala</h4>
+        <h4>Tralala</h4>
+      </section>
+      <h4>Tralala</h4>
+      <h4>Tralala</h4>
+      <section>
+        <h4>Tralala</h4>
+      </section>
+      <hr />
+
+      <h3>general selectors</h3>
+      <p>he general sibling selector selects all elements that are next siblings of a specified element.</p>
+      <p>
+        Voorbeeld: In de onderstaande code krijgen alle h5 tags die buiten de
+        section staat de achtergrondkleur.
+      </p>
+      <p>CSS: section ~ h5{
+        background-color: greenyellow;
+      }</p>
+      <img src="/img/Schermafbeelding 2021-11-03 om 11.35.50.png" alt="">
+      <section>
+        <h5>Tralala</h5>
+        <h5>Tralala</h5>
+      </section>
+      <h5>Tralala</h5>
+      <h5>Tralala</h5>
+      <section>
+        <h5>Tralala</h5>
+      </section>
+      <h5>Tralala</h5>
+    </div>
+  </body>
+</html>
