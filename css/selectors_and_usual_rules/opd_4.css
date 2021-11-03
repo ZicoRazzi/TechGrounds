@@ -1,0 +1,13 @@
+div{
+  width: 200px;
+  height: 150px;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: rgb(155, 155, 155);
+}
+body, h2{
+  color: green;
+}
+p{
+  color: darkblue;
+}

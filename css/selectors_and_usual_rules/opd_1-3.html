@@ -1,28 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS selectors and usual rules</title>
-  <link rel="stylesheet" href="opd_1-3.css">
-  <style>
-    .embeded{
-      font-size: 18px;
-      font-style: italic;
-      color: red;
-    }
-  </style>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS selectors and usual rules</title>
+    <link rel="stylesheet" href="opd_1-3.css" />
+    <style>
+      .embeded {
+        font-size: 18px;
+        font-style: italic;
+        color: red;
+      }
+    </style>
+  </head>
 
-<body>
-  <div class="container">
-<h2>Opdracht 1</h2>
-    <h3>Er zijn drie manieren om CSS in je HTML pagina's te krijgen:</h3>
+  <body>
+    <div class="container">
+      <h2>Opdracht 1</h2>
+      <h3>Er zijn drie manieren om CSS in je HTML pagina's te krijgen:</h3>
 
-    <p class="linked">CSS Stylesheet koppelen aan HTML pagina. De meest ideale oplossing is 1 of meer stylesheet(s) te maken die voor alle pagina's van de website gelden en deze aan de HTML-pagina te koppelen (linked).</p>
-    <p class="embeded">CSS stijlregels opnemen in de HTML pagina. Bij uitzondering, als voorbeeld-pagina's of omdat het slechts 1 uitzondering bevat, kunnen specifiek voor 1 HTML-document geldende regels ook opgenomen worden in het document.</p>
-    <p class="inline" style="color: #007">CSS stijlregels invoegen per HTML-element. De laatste en ook minst wenselijke opname van specifieke stijlregels is de inline methode. Hierbij worden per HTML-element zoals bijvoorbeeld deze &#60;p&#62; element de stijlregels opgegeven.</p>
-  </div>
-</body>
+      <p class="linked">
+        CSS Stylesheet koppelen aan HTML pagina. De meest ideale oplossing is 1
+        of meer stylesheet(s) te maken die voor alle pagina's van de website
+        gelden en deze aan de HTML-pagina te koppelen (linked).
+      </p>
+      <p class="embeded">
+        CSS stijlregels opnemen in de HTML pagina. Bij uitzondering, als
+        voorbeeld-pagina's of omdat het slechts 1 uitzondering bevat, kunnen
+        specifiek voor 1 HTML-document geldende regels ook opgenomen worden in
+        het document.
+      </p>
+      <p class="inline" style="color: rgb(156, 158, 6)">
+        CSS stijlregels invoegen per HTML-element. De laatste en ook minst
+        wenselijke opname van specifieke stijlregels is de inline methode.
+        Hierbij worden per HTML-element zoals bijvoorbeeld deze &#60;p&#62;
+        element de stijlregels opgegeven.
+      </p>
+      <h2>Opdracht 2</h2>
+      <h3>CSS syntax</h3>
+      <p>
+        De CSS-syntaxis bestaat uit 3 delen: een selector, een attribute en een
+        waarde.
+      </p>
+      <p>Syntaxis: selector {attribute: value}</p>
+      <p>
+        De selector vertegenwoordigt het HTML-element dat we willen opmaken.
+        Bijvoorbeeld:
+      </p>
+      <p class="css-syntax">
+        .box{ width: 100px; height: 100px; border-radius: 10px;
+        background-color: rgb(207, 76, 15) }
+      </p>
+      <box class="box"></box>
+
+      <h2>Opdracht 3</h2>
+      <h3>Verschillende selectors</h3>
+      <h4>Type selectors</h4>
+      <p>
+        De type selector komt overeen met de HTML elementen. Met andere woorden,
+        het selecteert alle elementen van het gegeven type in een document.
+      </p>
+      <p>Voorbeeld: alle h3 tags op deze pagina hebben een kleur.</p>
+      <p class="css-syntax">h3{ color: #0b0; }</p>
+      <h4>Descendant selectors</h4>
+      <p>
+        De descendant-combinator - meestal weergegeven door een enkele spatie
+        combineert twee selectors zodat elementen die overeenkomen met de tweede
+        selector worden geselecteerd als ze een voorouder hebben (ouder, ouder,
+        ouder, ouder, ouder, enz.) element dat overeenkomt met de eerste
+        selector. Selectors die gebruik maken van een
+        <span>descendant-combinator</span> worden descendant selectors genoemd.
+      </p>
+      <p>Voorbeeld: span tag in bovenstaande p tag</p>
+      <p class="css-syntax">p span{ font-size: 22px; font-weight: bold; }</p>
+      <h4>Class selectors</h4>
+      <p class="class-selector">
+        De class selector matcht elementen op basis van de inhoud van hun
+        classattribuut. De naam van een class selector begint met een punt (.),
+        maar bestaat verder uit underscores, hyphens, letters en cijfers, net
+        als de naam van een element selector. Het grootste verschil is dat
+        terwijl de naam van een element selector een tag in een HTML document
+        aanduidt, de naam van een class selector vrij is. De naam wordt gekozen
+        door de CSS ontwikkelaar.
+      </p>
+      <p>Voorbeeld: de bovenstaande p tag met de class "class-selector"</p>
+      <p class="css-syntax">
+        .class-selector{ font-style: italic; font-family: Verdana, sans-serif;
+        font-size: 20px; }
+      </p>
+    </div>
+  </body>
 </html>
