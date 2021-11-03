@@ -5,9 +5,10 @@ div{
   padding: 10px;
   background-color: #cacaca;
 }
-body, h2{
-  color: green;
+.title, .black_tekst{
+  color: black;
 }
-p{
-  color: darkblue;
+
+.green_text{
+  color: green;
 }
