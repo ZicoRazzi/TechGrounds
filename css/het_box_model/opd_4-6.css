@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  padding: 20px;
+  font-size: 18px;
+}
+h2, h3, p{
+  margin: 10px 0px 10px 0px;
+}
+li{
+  margin: 0px 0px 0px 20px;
+}
+.box{
+  
+  width: 250px;
+  height: 250px;
+  padding: 20px;
+  border: 2px solid rgb(0, 128, 0);
+  background-color: rgb(233, 27, 61);
+  color: #fff;
+
+}
+
+.box_2{
+  margin: 40px 0px 20px 40px;
+  width: 250px;
+  height: 250px;
+  padding: 20px;
+  border: 2px solid rgb(0, 128, 0);
+  background-color: rgb(233, 27, 61);
+  color: #fff;
+
+}
