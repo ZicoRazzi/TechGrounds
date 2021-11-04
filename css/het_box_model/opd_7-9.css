@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+.container{
+  padding: 20px;
+  font-size: 18px;
+}
+h2, h3, p{
+  margin: 10px 0px 10px 0px;
+}
+.box{
+  height: 100px;
+  width: 100px;
+  border: 5px solid #000;
+  background-color: #ccc;
+  padding: 5px;
+  margin: 5px;
+}
+.box_2{
+  height: 200px;
+  width: 200px;
+  border: 5px solid rgb(0, 0, 119);
+  background-color: rgb(250, 250, 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box_3{
+  height: 100px;
+  width: 100px;
+  border: 2px dotted rgb(0, 0, 119);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h3{
+  color: rgb(0, 0, 119);
+}
+
+.box_4{
+  height: 200px;
+  width: 200px;
+  border: 5px solid rgb(0, 0, 119);
+  background-color: rgb(250, 250, 7);
+  padding: 30px;
+  margin: 30px 0px 30px 30px;
+}
+.box_5{
+  height: 100px;
+  width: 100px;
+  border: 2px dotted rgb(0, 0, 119);
+  padding: 20px;
+}
+h3{
+  color: rgb(0, 0, 119);
+}
+
+.box_6{
+  height: 200px;
+  width: 200px;
+  border: 5px solid rgb(0, 0, 119);
+  background-color: rgb(250, 250, 7);
+  padding: 30px;
+  margin: 30px 0px 30px 30px;
+  box-sizing: border-box;
+}
+.box_7{
+  height: 100px;
+  width: 100px;
+  border: 2px dotted rgb(0, 0, 119);
+  padding: 20px;
+}
+h3{
+  color: rgb(0, 0, 119);
+  margin: 20px;
+}
