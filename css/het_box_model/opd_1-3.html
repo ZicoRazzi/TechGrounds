@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Het Box Model</title>
+    <link rel="stylesheet" href="opd_1-3.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Opdracht 1</h2>
+      <p>Wat zijn de eigenschappen van block boxes en inline boxes?</p>
+      <p>Antwoord:</p>
+      <p class="antwoord">
+        Een <span>block-element</span> pakt de hele horizontale ruimte die
+        beschikbaar is, ongeacht hoeveel het nodig heeft. Dit heeft het gevolg
+        dat een block-element de na hem komende informatie (tekst of andere HTML
+        elementen) automatisch naar een nieuwe regel duwt. Dus twee block
+        elementen kunnen niet op één regel staan, tenzij we speciale maatregelen
+        nemen.
+      </p>
+      <p class="antwoord">
+        In tegenstelling tot het block-element, onderbreekt een
+        <span>inline-element</span> niet de invoer van tekst met plotselinge
+        overgang naar een nieuwe regel. Een inline-element pakt precies genoeg
+        horizontale ruimte om zijn inhoud weer te geven. Na hem kunnen meer
+        inline-elementen weergegeven worden op de regel, totdat deze vol is.
+      </p>
+      <p class="antwoord">
+        Inline-elementen worden niet beïnvloed door de CSS properties:
+        width/height (breedte/hoogte); die properties zijn bedoeld voor
+        block-elementen. De width en height properties worden genegeerd voor
+        inline elementen. In plaats daarvan kan je de regelafstand tussen inline
+        elementen declareren met de CSS property "line-height".
+      </p>
+      <h3>block</h3>
+      <p>
+        Een element met weergavetype (display type) block heeft de volgende
+        eigenschappen:
+      </p>
+      <ul>
+        <li>Begint automatisch op een nieuwe lijn.</li>
+        <li>Voegt witruimte aan de randen van het blok toe.</li>
+        <li>Neemt de volledige breedte van het ouderelement in beslag.</li>
+        <li>De hoogte past zich aan aan de inhoud.</li>
+      </ul>
+
+      <h3>inline</h3>
+      <p>
+        Een element met display type inline heeft de volgende eigenschappen:
+      </p>
+      <ul>
+        <li>
+          Het wordt opgenomen in de lijn van de tekst en breekt ze dus niet op.
+          Je kan ze dus in het midden van een zin gebruiken.
+        </li>
+        <li>Voegt nergens witruimte toe.</li>
+        <li>De breedte past zich aan aan de inhoud.</li>
+      </ul>
+      <h3>inline-block</h3>
+      <p>
+        Een element met display type inline-block combineert de eigenschappen
+        van beide types. Het laat toe dat blokken hun standaardwerking behouden,
+        maar toch naast elkaar worden gezet (mits hun samengetelde breedte de
+        breedte van het ouderelement niet overschrijdt). Ze beginnen dus niet
+        meer automatisch op een nieuwe lijn. Er mag witruimte aan alle kanten
+        toegevoegd worden via CSS.
+      </p>
+
+      <p>
+        Standaard bestaan er geen inline-elementen. Om gebruik te maken van dit
+        display type moet je het veranderen via CSS.
+      </p>
+
+      <h2>Opdracht 2</h2>
+      <p>Maak wat hieronder staat met paragraph en span tags.</p>
+      
+      <p class="green_paragraph">Dit is een block box en neemt de hele breedte in waardoor de volgende box op de volgende regel zit</p>
+      
+      <p class="green_paragraph">In dit blok zit <span class="green_span">inline tekst</span> in wat dus niet op de volgende regel komt te <span class="green_span">staan</span></p>
+      
+      <h2>Opdracht 3</h2>
+      <p> Wat gebeurt er als je een width en een height toevoegt aan de span tag ( &lt;span&gt; ) van vorige opdracht?</p>
+
+      <p class="green_paragraph">In dit blok zit <span class="green_span_2">inline tekst</span> in wat dus niet op de volgende regel komt te <span class="green_span_2">staan</span></p>
+
+      <p>Antwoord:</p>
+      <p class="antwoord">Inline-elementen worden niet beïnvloed door de CSS properties: width/height (breedte/hoogte).</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  padding: 20px;
+  font-size: 18px;
+}
+h2, h3, p{
+  margin: 10px 0px 10px 0px;
+}
+span{
+  font-weight: bold;
+}
+.antwoord{
+  font-style: italic;
+  color: rgb(0, 0, 139);
+}
+li{
+  margin: 0px 0px 0px 20px;
+}
+.green_paragraph{
+  background-color: rgb(6, 155, 6);
+  border: solid 1px #000;
+}
+.green_span{
+  background: #fff;
+  color:rgb(94, 121, 94);
+}
+.green_span_2{
+  background: #fff;
+  color:rgb(94, 121, 94);
+  width: 50px;
+  height: 30px;
+}
