@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.container{
+  padding: 20px;
+  font-size: 18px;
+}
+h2, h3, p{
+  margin: 10px 0px 10px 0px;
+}
+li{
+  margin: 0px 0px 0px 20px;
+}
+.antwoord{
+  color: rgb(0, 128, 0);
+}
+
+/* voorbeelden */
+
+  .text::first-letter{
+    color: rgb(255, 78, 47);
+    font-size: 50px;
+  }
+  .text::first-line {
+    background-color: rgb(255, 255, 0);
+  }
+.list-item{
+  list-style: none;
+}
+.list li:before{
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(7, 3, 248);
+  display: inline-block;
+  margin-right: 10px;
+
+}
+.list li:after{
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color:transparent;
+  border: 1px solid rgb(255, 0, 128);
+  display: inline-block;
+  margin-left: 10px;
+
+}
+.list li:hover:before{
+  background-color: rgb(255, 0, 128);
+}
+.list li:hover:after{
+  border:1px solid rgb(7, 3, 248);
+}
+
+video::backdrop {
+  background-color: rgb(218, 165, 32);
+}
+
+video {
+  width: 600px;
+}
+
+input[type=file]::file-selector-button {
+  border: 2px solid rgb(108, 92, 231);
+  padding: .2em .4em;
+  border-radius: .2em;
+  background-color: rgb(162, 155, 254);
+  transition: 1s;
+}
+ 
+input[type=file]::file-selector-button:hover {
+  background-color: rgb(129, 236, 236);
+  border: 2px solid rgb(0, 206, 201);
+}
+
+p::grammar-error  {
+  text-decoration: underline rgb(255, 0, 0);
+  color: rgb(255, 0, 0);
+}
+
+ol li::marker{
+  color:rgb(7, 3, 248);
+  font-weight: bold;
+}
+
+/* ion-button.pink-dotted::part(native) {
+  color: black;
+  border: dashed 2px black;
+  background-color: #d406d8;
+}
+
+ion-button.pink-dotted::part(button):hover {
+  background-color: #ba16bd;
+} */
+
+input {
+  border: #000;
+  font-size: 1.2em;
+  width: 100%;
+}
+input::placeholder {
+  color: rgb(255, 0, 0);
+}
+.example-color::selection {
+  color: rgb(142, 68, 173);
+}
+.example-input::selection {
+  background: rgb(2, 71, 31);
+  color: rgb(255, 255, 0);
+}
+::spelling-error  {
+  text-decoration: wavy rgb(255, 0, 0);
+}
+::target-text {
+  background-color: rebeccapurple;
+  color: white;
+  font-weight: bold;
+}

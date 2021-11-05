@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Elements</title>
+    <link rel="stylesheet" href="opd_1-3.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Opdracht 1</h2>
+      <p>
+        Kun je enkele voorbeelden geven van pseudo-elementen (minimaal 4)?
+        Beschrijf met je eigen woorden wat deze pseudo-elementen inhouden.
+      </p>
+      <p class="antwoord">Antwoord.</p>
+      <p>De meest voorkomende pseudo elementen:</p>
+
+      <ul>
+        <li>::after</li>
+        <p>
+          creëert een pseudo-element dat de last child is van het geselecteerde
+          element. Vaak gebruikt om cosmetische inhoud aan een element toe te
+          voegen met behulp van de content eigenschap.
+        </p>
+        <li>::before</li>
+        <p>
+          creëert een pseudo-element dat de first child is van het geselecteerde
+          element. Vaak gebruikt om cosmetische inhoud aan een element toe te
+          voegen met behulp van de content eigenschap.
+        </p>
+        <li>::first-line</li>
+        <p>
+          past stijlen toe op de eerste regel van een blok-element. De lengte
+          van de eerste regel is afhankelijk van vele factoren, waaronder de
+          breedte van het element, de breedte van het document en de
+          lettergrootte van de tekst.
+        </p>
+        <li>::first-letter</li>
+        <p>
+          past de stijlen toe op de eerste letter van de eerste regel van het
+          blok-element, maar alleen als er geen andere voorafgaande inhoud is
+          (zoals afbeeldingen of inline tabellen).
+        </p>
+      </ul>
+
+      <h2>Opdracht 2</h2>
+      <p>
+        Er zijn 14 verschillende pseudo elementen. Je hebt in de voorgaande
+        opdracht reeds 4 kunnen benoemen. Kun je de andere 10 ook benoemen en
+        aangeven wat ze precies doen?
+      </p>
+      <p class="antwoord">Antwoord.</p>
+      <p>Andere tien pseudo elementen:</p>
+      <ul>
+        <li>::backdrop</li>
+        <p>
+          is een box ter grootte van de viewport die wordt weergegeven direct
+          onder elk element dat wordt gepresenteerd in volledig-scherm modus.
+        </p>
+        <li>::file-selector-button</li>
+        <p>vertegenwoordigt de knop van een input van het type="file".</p>
+        <li>::grammar-error</li>
+        <p>
+          vertegenwoordigt een tekstsegment dat door de user agent is gemarkeerd
+          als grammaticaal onjuist.
+        </p>
+        <li>::marker</li>
+        <p>
+          selecteert het markeringsvak van een li element, dat meestal een
+          opsommingsteken of nummer bevat.
+        </p>
+        <li>::part</li>
+        <p>
+          vertegenwoordigt elk element binnen een shadow tree dat een
+          overeenkomend part attribuut heeft.
+        </p>
+        <li>::placeholder</li>
+        vertegenwoordigt de placeholder-text in een input of textarea element.
+        <li>::selection</li>
+        <p>
+          past stijlen toe op het deel van een document dat door de gebruiker is
+          gemarkeerd (zoals klikken en slepen met de muis over tekst).
+        </p>
+        <li>::slotted()</li>
+        <p>
+          vertegenwoordigt elk element dat in een slot is geplaatst in een HTML
+          template
+        </p>
+        <li>::spelling-error</li>
+        <p>
+          vertegenwoordigt een tekstsegment dat door de user agent is gemarkeerd
+          als onjuist gespeld.
+        </p>
+        <li>::target-text</li>
+        <p>
+          vertegenwoordigt de tekst waarnaar is gescrolld als de browser
+          scroll-naar-tekst fragmenten ondersteunt. Hiermee kunnen auteurs
+          kiezen hoe ze dat gedeelte van de tekst willen markeren.
+        </p>
+      </ul>
+      <h2>Opdracht 3</h2>
+      <p>De voorbeelden:</p>
+      <h3>::first-letter & ::first-line</h3>
+      <br />
+      <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero eum
+        aliquid minima dolore deleniti, quos eius! Deleniti accusantium
+        explicabo distinctio minus non accusamus, quidem qui rem ratione
+        cupiditate suscipit provident repellat debitis, tempora est id dicta
+        eius quisquam itaque praesentium laborum aspernatur deserunt. Temporibus
+        commodi omnis veniam doloremque pariatur impedit!
+      </p>
+      <br />
+      <h3>::before & ::after</h3>
+      <ul class="list">
+        <li class="list-item">item</li>
+        <li class="list-item">item</li>
+        <li class="list-item">item</li>
+        <li class="list-item">item</li>
+      </ul>
+
+      <h3>::backdrop</h3>
+          
+            <p>
+              Open this video in full screen to see the <code>goldenrod</code> backdrop.
+            </p>
+            
+          <video src="https://storage.googleapis.com/web-dev-assets/hands-on-portals/portals_vp9.webm" controls></video>
+          <br>
+        <h3>::file-selector-button</h3>
+
+        <form>
+          <label for="fileUpload">Upload file</label>
+          <input type="file" id="fileUpload">
+        </form>
+        <br>
+        <h3>::grammar-error</h3>
+        <p>My friends is coming to the party tonight.</p>
+        <br>
+        <h3>::marker</h3>
+
+        <ol>
+          <li>item 1</li>
+          <li>item 2</li>
+          <li>item 3</li>
+        </ol>
+
+        <h3>::part???</h3>
+
+        <!-- <ion-button>Default styling</ion-button>
+
+        <ion-button class="pink-dotted">customized styling</ion-button> -->
+
+        <h3>::placeholder</h3>
+        <input id="school" name="school" type="text" placeholder="TechGrounds WebDev">
+
+        <h3>::selection</h3>
+        <p class='example-color'>Try selecting me for a different text color.</p>
+        <input class='example-input' type='text' value='Selection text'>
+
+        <h3>::slotted()???</h3>
+
+        <h3>::spelling-error</h3>
+        <p contenteditable spellcheck="true">My friends are coegdfgfddffbgning to the party tonight.</p>
+        <h3>::target-text???</h3>
+    </div>
+  </body>
+</html>
