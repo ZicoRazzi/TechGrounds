@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button{
+  position: relative;
+  margin: 20px 20px;
+  width: 600px;
+  height: 50px;
+  background-color: rgb(72, 152, 155);
+  color:#fff;
+  border: none;
+  font-size: 28px;
+}
+
+button::after {
+  content:'';
+  position: absolute;
+  background-color: rgb(226, 32, 64);
+  width: 7px;
+  height: 50px;
+  top: 0;
+  left: 0;
+}
+button::before{
+  content:'';
+  position: absolute;
+  background-color: rgb(226, 32, 64);
+  width: 50px;
+  height: 7px;
+  top: 0;
+  left:0;
+}
+span::after {
+  content:'';
+  position: absolute;
+  background-color: rgb(226, 32, 64);
+  width: 50px;
+  height: 7px;
+  bottom: 0;
+  right: 0;
+ 
+}
+
+span::before {
+  content:'';
+  position: absolute;
+  background-color: rgb(226, 32, 64);
+  width: 7px;
+  height: 50px;
+  bottom: 0;
+  right: 0;
+ 
+}
