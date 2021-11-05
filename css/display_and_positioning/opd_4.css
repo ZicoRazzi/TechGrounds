@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  position: relative;
+}
+h1{
+  background-color: red;
+  position: absolute;
+  top:100px;
+  left:50px;
+}
+.p1{
+  background-color: green;
+  position:absolute;
+  top:150px;
+  left:50px;
+}
+.p2{
+  background-color: green;
+  position:absolute;
+  top:180px;
+  left:50px;
+}

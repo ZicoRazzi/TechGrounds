@@ -1,0 +1,13 @@
+body{
+  position: relative;
+}
+img{
+  position: absolute;
+  top: 100px;
+  left: 50px;
+}
+.text{
+  position: absolute;
+  top: 120px;
+  left: 80px;
+}

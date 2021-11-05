@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.container{
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  background: url(/img/cappadocia.png) no-repeat center;
+  position: relative;
+}
+
+.welcome-text{
+position: absolute;
+top:100px;
+right: 180px;
+}
+h1{
+  font-size: 48px;
+  color: rgb(0, 119, 16);
+  line-height: 2;
+  letter-spacing: 1.8px;
+}
+h2{
+  color: yellow;
+}
+span{
+  color: #fff;
+}
