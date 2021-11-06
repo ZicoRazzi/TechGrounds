@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.circle{
+  margin: 50px 50px 0px 50px;
+  display: inline-block;
+}
+.circle_1,
+.circle_2,
+.circle_3{
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #000;
+  text-align: center;
+  color: #fff;
+  padding: 22px;
+  font-size: 26px;
+  
+}
+.circle_1::before,
+.circle_2::before,
+.circle_3::before{
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #000;
+  top:20px;
+  left:-15px;
+}
+
+.first_dot::after,
+.first_dot::after,
+.first_dot::after{
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #000;
+  top:16px;
+  left:55px;
+}
+.first_dot{
+  position: absolute;
+  top:2px;
+  left:0px;
+  font-size: 36px;
+}
+.second_dot{
+  position: absolute;
+  bottom: 22px;
+  right: 0px;
+  font-size: 36px;
+}

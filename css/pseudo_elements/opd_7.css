@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  margin: 50px 0px 0px 50px;
+  text-align: center;
+}
+.box::before,
+.box::after{
+  content: "";
+  position: absolute;
+	top: 0px;
+	left: 0px;    
+	width: 200px;
+	height: 200px;
+  background: red;
+}
+.box::before {
+  transform: rotate(30deg);
+}
+.box::after {
+  transform: rotate(60deg);
+}
