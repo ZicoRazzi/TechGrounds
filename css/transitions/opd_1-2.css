@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  padding: 20px;
+  font-size: 18px;
+}
+h2, h3, p{
+  margin: 10px 0px 10px 0px;
+}
+li{
+  margin: 0px 0px 0px 20px;
+}
+.antwoord{
+  color: rgb(0, 128, 0);
+  font-style: italic;
+}
+
+.color_effect{
+  color: rgb(0, 0, 255);
+  background-color: rgb(229, 255, 0);
+  transition: color 2s ease-out;
+  transition: background-color 2s ease-out;
+}
+.color_effect:hover{
+  background-color: rgb(9, 255, 0);
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+}

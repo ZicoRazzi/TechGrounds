@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color:rgb(204, 204, 204);
+}
+.container{
+  position: relative;
+  height: 800px;
+}
+span{
+  margin: 20px 0px 0px 20px;
+  font-size: 20px;
+}
+h2{
+  margin: 120px 0px 0px 20px;
+  font-size: 40px;
+}
+.author{
+  margin: 180px 0px 0px 20px;
+  font-size: 24px;
+}
+.name{
+  margin: 10px 0px 0px 20px;
+  font-size: 24px;
+}
+/* .placeholder_1{
+  position: absolute;
+  width: 300px;
+  height: 480px;
+  background-color: rgb(83, 80, 80); 
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 20px;
+  color: #fff;
+  font-weight: bolder;
+}
+.placeholder_2{
+  position: absolute;
+  width: 300px;
+  height: 480px;
+  background-color: rgb(83, 80, 80); 
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 20px;
+  color: #fff;
+  font-weight: bolder;
+}
+.placeholder_3{
+  position: absolute;
+  width: 300px;
+  height: 480px;
+  background-color: rgb(83, 80, 80); 
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 20px;
+  color: #fff;
+  font-weight: bolder;
+}
+.placeholder_4{
+  position: absolute;
+  width: 300px;
+  height: 480px;
+  background-color: rgb(83, 80, 80); 
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 20px;
+  color: #fff;
+  font-weight: bolder;
+} */
+.placeholder{
+  position: absolute;
+  width: 300px;
+  height: 480px;
+  background-color: rgb(83, 80, 80); 
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 20px;
+  color: #fff;
+  font-weight: bolder;
+}
+.placeholder_1{
+  top: 50px;
+  left: 50px;
+  transition: all 2s ease-out;
+
+}
+.placeholder_2{
+  top: 50px;
+  left: 125px;
+  transition: all 2s ease-out;
+
+}
+.placeholder_3{
+  top: 50px;
+  left: 200px;
+  transition: all 2s ease-out;
+
+}
+.placeholder_4{
+  top: 50px;
+  left: 275px;
+  transition: all 2s ease-out;
+
+}
+
+.placeholder_1:hover{
+  transform: translate(800px);
+  color:red;
+
+}
+.placeholder_2:hover{
+  transform: translate(800px);
+  color: red;
+}
+.placeholder_3:hover{
+  transform: translate(800px);
+  color: red;
+}
+.placeholder_4:hover{
+  transform: translate(800px);
+  color: red;
+}

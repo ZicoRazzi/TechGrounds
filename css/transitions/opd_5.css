@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color:rgb(204, 204, 204);
+}
+
+.image_box{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 50px 0px 0px 50px;
+  border: 5px solid rgb(1, 49, 1);
+  background-image: url(/img/joker.jpg);
+}
+
+.box_cover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: yellow;
+  width: 290px;
+  height: 290px;
+  transition: all 3s ease;
+}
+.box_cover:hover{
+  transform: rotate(90deg) scale(2) translateY(-75%) translateX(75%);
+  background-color:rgb(1, 49, 1, 0.5);
+  background-image: url(/img/joker.jpg);
+}
