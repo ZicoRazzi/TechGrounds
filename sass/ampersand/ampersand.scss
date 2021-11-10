@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  width: 100%;
+  min-height: 800px;
+  margin: 0 auto;
+  background-color:rgb(230, 230, 230);
+}
+.nav{
+ 
+  &-menu {
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+    &-list{
+      list-style: none;
+    }
+      &-link{
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        margin-right: 50px;
+        display: inline-block;
+      }
+    }
+  

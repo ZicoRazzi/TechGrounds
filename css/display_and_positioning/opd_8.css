@@ -8,7 +8,7 @@
 } */
 .container{
   margin: 0 auto;
-  width: 100%;
+  width: 960px;
   height: 100vh;
   background: url(/img/ijsbeer.jpg) no-repeat center;
   position: relative;
@@ -22,6 +22,14 @@ h1{
   width: 800px;
   background-color: yellow;
   padding-left: 80px;
+}
+.yellow_box{
+  position: absolute;
+  top:102px;
+  right: -100px;
+  height: 68px;
+  width: 100px;
+  background-color: yellow;
 }
 h2{
   position: absolute;

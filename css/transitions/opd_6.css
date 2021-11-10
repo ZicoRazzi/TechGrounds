@@ -82,25 +82,25 @@ h2{
   font-weight: bolder;
 }
 .placeholder_1{
-  top: 50px;
+  top: 150px;
   left: 50px;
   transition: all 2s ease-out;
 
 }
 .placeholder_2{
-  top: 50px;
+  top: 150px;
   left: 125px;
   transition: all 2s ease-out;
 
 }
 .placeholder_3{
-  top: 50px;
+  top: 150px;
   left: 200px;
   transition: all 2s ease-out;
 
 }
 .placeholder_4{
-  top: 50px;
+  top: 150px;
   left: 275px;
   transition: all 2s ease-out;
 
