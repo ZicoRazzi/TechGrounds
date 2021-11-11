@@ -7,7 +7,7 @@ body{
   background-color:rgb(204, 204, 204);
 }
 .container{
-  position: relative;
+  
   height: 800px;
 }
 span{
@@ -26,52 +26,9 @@ h2{
   margin: 10px 0px 0px 20px;
   font-size: 24px;
 }
-/* .placeholder_1{
-  position: absolute;
-  width: 300px;
-  height: 480px;
-  background-color: rgb(83, 80, 80); 
-  border: 1px solid #000;
-  border-radius: 20px;
-  padding: 20px;
-  color: #fff;
-  font-weight: bolder;
-}
-.placeholder_2{
-  position: absolute;
-  width: 300px;
-  height: 480px;
-  background-color: rgb(83, 80, 80); 
-  border: 1px solid #000;
-  border-radius: 20px;
-  padding: 20px;
-  color: #fff;
-  font-weight: bolder;
-}
-.placeholder_3{
-  position: absolute;
-  width: 300px;
-  height: 480px;
-  background-color: rgb(83, 80, 80); 
-  border: 1px solid #000;
-  border-radius: 20px;
-  padding: 20px;
-  color: #fff;
-  font-weight: bolder;
-}
-.placeholder_4{
-  position: absolute;
-  width: 300px;
-  height: 480px;
-  background-color: rgb(83, 80, 80); 
-  border: 1px solid #000;
-  border-radius: 20px;
-  padding: 20px;
-  color: #fff;
-  font-weight: bolder;
-} */
+
 .placeholder{
-  position: absolute;
+  
   width: 300px;
   height: 480px;
   background-color: rgb(83, 80, 80); 
@@ -80,46 +37,43 @@ h2{
   padding: 20px;
   color: #fff;
   font-weight: bolder;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  
 }
 .placeholder_1{
+  position: relative;
   top: 150px;
   left: 50px;
-  transition: all 2s ease-out;
+  transition: all 0.3s ease-in-out;
 
 }
 .placeholder_2{
+  position: relative;
   top: 150px;
-  left: 125px;
-  transition: all 2s ease-out;
+  left: -150px;
+  transition: all 0.3s ease-in-out;
 
 }
 .placeholder_3{
+  position: relative;
   top: 150px;
-  left: 200px;
-  transition: all 2s ease-out;
+  left: -350px;
+  transition: all 0.3s ease-in-out;
 
 }
 .placeholder_4{
+  position: relative;
   top: 150px;
-  left: 275px;
-  transition: all 2s ease-out;
+  left: -550px;
+  transition: all 0.3s ease-in-out;
 
 }
 
-.placeholder_1:hover{
-  transform: translate(800px);
-  color:red;
-
-}
-.placeholder_2:hover{
-  transform: translate(800px);
+.placeholder:hover{
+  margin-right: 200px;
+  cursor: pointer;
+  transform: translateY(-10%);
   color: red;
-}
-.placeholder_3:hover{
-  transform: translate(800px);
-  color: red;
-}
-.placeholder_4:hover{
-  transform: translate(800px);
-  color: red;
+  z-index: 3;
 }

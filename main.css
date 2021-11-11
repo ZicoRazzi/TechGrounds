@@ -1,0 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  width: 100%;
+  min-height: 800px;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  font-size: 1.6rem;
+}
+h2, h3, li{
+  margin: 50px 0px 50px 50px;
+}
+li{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+  margin-left:40px;
+}
+a:hover{
+  color: rgb(121, 86, 248);
+}
+h2{
+  color:rgb(79, 32, 250);
+}
+h3{
+  color:rgb(253, 77, 230)
+}
