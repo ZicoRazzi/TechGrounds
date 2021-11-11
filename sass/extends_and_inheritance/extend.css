@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  padding: 20px;
+  font-size: 18px;
+}
+h2, h3, h4, p{
+  margin: 10px 0px 10px 0px;
+}
+.opdracht_1{
+  background-color: rgb(236, 236, 236);
+  padding: 10px;
+}
+.opdracht_2{
+  background-color: rgb(255, 239, 239);
+  padding: 10px;
+}
+.code{
+  background-color: #ccc;
+  color: blue;
+}
+.conclusion{
+  display: block;
+  margin: 20px auto;
+  width: 90%;
+  min-height: 200px;
+  border: thin solid black;
+  padding: 10px;
+  color: green;
+  font-size: 1.4rem;
+  letter-spacing: 1.2px;
+}
+i{  
+  font-weight: bolder;
+}

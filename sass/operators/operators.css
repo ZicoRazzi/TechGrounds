@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  padding: 20px;
+  font-size: 18px;
+}
+h2, p{
+  margin: 10px 0px 10px 0px;
+}

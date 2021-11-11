@@ -1,0 +1,14 @@
+@mixin colorChangingBox{
+  width: 150px;
+  height: 150px;
+  border: 2px solid darkgreen;
+  background-color: chocolate;
+  margin-top: 50px;
+  transition: all 1s ease;
+  &:hover{
+    background-color: rgb(0, 100, 0);
+    border-radius: 50%;
+    border: 2px solid hsl(25, 75%, 47%);
+    
+  }
+}

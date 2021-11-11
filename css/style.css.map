@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "ACGA,AAAA,OAAO,CAAA;EACL,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,IAAI;EACZ,aAAa,EAAE,GAAG;EAClB,MAAM,EAAE,IAAI;EAEZ,gBAAgB,EAAE,OAAkB;EACpC,KAAK,EAAE,IAAI;CAKZ;;AAZD,AAQE,OARK,AAQJ,MAAM,CAAA;EACL,gBAAgB,EAAE,OAAiB;CAEpC;;ADXH,AAAA,UAAU,CAAA;EACR,gBAAgB,EAAE,IAAI;EACtB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;EACb,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;CAEpB",
+    "sources": [
+        "../sass/partials_and_modules/style.scss",
+        "../sass/partials_and_modules/partials/_buttons.scss",
+        "../sass/partials_and_modules/partials/_colors.scss",
+        "../sass/partials_and_modules/partials/_colors.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}

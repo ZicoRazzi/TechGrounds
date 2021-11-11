@@ -1,0 +1,16 @@
+@import '_colors.scss';
+
+
+.button{
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  // background-color: $button-color;
+  background-color: rgb(226, 100, 169);
+  color: #fff;
+  &:hover{
+    background-color: rgb(206, 18, 223); 
+    // background-color:$button-hover-color;
+  }
+}

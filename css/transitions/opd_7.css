@@ -19,7 +19,7 @@
   margin: 50px 0px 0px 50px;
   background-color: rgb(226, 128, 128);
   position: relative;
-  animation: rolling-forms 3s linear 1s infinite alternate;;
+  animation: rolling-forms 3s linear 1s infinite alternate;
 }
 
 @keyframes rolling-forms {

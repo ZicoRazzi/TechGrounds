@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Extend</title>
+    <link rel="stylesheet" href="extend.css" />
+  </head>
+  <body>
+    <div class="container">
+     <section class="opdracht_1">
+      <h2>Opdracht 1</h2>
+      <h3>SASS: mixin vs extend</h3>
+      <h3>Mixins:</h3>
+      <p>
+        A mixin lets you reuse groups of CSS declarations that we want to reuse
+        again in our code, A good use of a mixin is for vendor prefixes. You can
+        use mixins in three ways:
+      </p>
+      <h4>First Way:</h4>
+      <p class="code">
+        @mixin paragraph()<p>{ font-family: sans-serif; font-size: 14px; }</p> p {
+        @include heading; }
+      </p>
+      <h4>Second way:</h4>
+      <p>you can pass arguments to a mixin:</p>
+      <p class="code">
+        @mixin transition ($property) <p> { -webkit-transition : $property;
+        -ms-transition : $property; transition : $property; -moz-transition:
+        $property; }</p> .container { @include transition(rotate(30deg)); }
+      </p>
+      <h4>Third way:</h4>
+      <p>
+        Passing Content Blocks to a Mixin, Inside the mixin, you can add
+        @content; statement, and it will be replaced by the content block you
+        pass to the mixin.
+      </p>
+      <p class="code">
+        @mixin message <p>{ border-radius: 5px;; padding: 0.5em 1.0em;
+        text-decoration: none; color: #fff; @content; } </p>.success-message {
+        @include message { background-color: green ; } }
+      </p>
+      <br />
+      <h3>@extend directive:</h3>
+      <p>
+        Using @extend lets you share a set of CSS properties from one selector
+        to another. We can use @extend in two ways:
+      </p>
+      <h4>First way:</h4>
+      <p>Your selectors can inherit the styles of other selectors:</p>
+      <p class="code">
+        .stat { width: 100%; height: 100%; } <p>.container { @extend .stat ; }</p> p {
+        @extend .stat ; }
+      </p>
+      <h4>Second way:</h4>
+      <p>
+        By using Placeholders, Placeholders are a fresh feature of SASS. Added
+        in version 3.2 they look like that:
+      </p>
+      <p class="code">
+        %message-shared { border: 1px solid #ccc; padding: 10px; color: #333; } <p>
+
+        .success { @extend %message-shared; border-color: green; }</p> .error {
+        @extend %message-shared; border-color: red; }
+      </p>
+      <br />
+      <div class="conclusion">
+        <p>
+          When we can use @extend or mixins: Both @extend and @mixin help
+          modularize your code and make it easier to reuse styles across your
+          stylesheet. When you’re dealing with styles for related components,
+          say a set of buttons, then it makes sense to share styles using the
+          @extend directive, <i>so @extend produces DRY CSS.</i>
+        </p>
+        <p>
+          The main advantage of using mixins is the power and flexibility they
+          have because they can accept arguments. Naturally, if you want to pass
+          arguments, you’ll have to choose @mixin over @extend. If you don’t
+          have any arguments to pass you might want to take advantage of the
+          DRYer result of using @extend. Repetition in your compiled code isn’t
+          necessarily a bad thing if the file weight savings are minimal. It’s
+          bad when it’s in your source because the repeated code is harder to
+          maintain. Using @mixin leads to DRY source code with less DRY compiled
+          code. The mixin is best used for accepting a variable and making
+          declarations based upon the variable it receives
+        </p>
+      </div>
+     </section>
+
+     <section class="opdracht_2">
+       <h2>Opdracht 2</h2>
+       <h3>Responsive Web Design in Sass</h3>
+       <h4>Variables in queries</h4>
+       <p>SASS Variables: SASS Variables are very simple to understand and use. SASS Variables assign a value to a name that begins with $ sign, and then just refer to that name instead of the value. Despite this, they are one of the most useful tools SASS provides. </p>
+
+       <img src="/img/Schermafbeelding 2021-11-11 om 10.27.21.png" width="600" height="500" alt="code">
+     </section>
+    </div>
+  </body>
+</html>
