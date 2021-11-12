@@ -119,14 +119,20 @@ nav a {
   }
 }
 @Media only screen and (min-width: 768px) and (max-width: 1024px) {
- 
+ header{
+   display: flex;
+   width: 40%;
+   padding: 20px;
+ }
  .main {
     display: flex;
     text-align: left;
   }
   .gallery-item .thumbnail {
     width: 400px;
-    
+  }
+  .gallery{
+    margin-top: -230px;
   }
   .page-description {
     font-size: 1rem;
