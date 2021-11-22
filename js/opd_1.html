@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables and Datatypes</title>
+    <link rel="stylesheet" href="opd_1.css" />
+  </head>
+  <body>
+   <div class="container">
+    <h2>Variables and Data Types</h2>
+    <p>Wat is het verschil tussen const, let en var?</p>
+    <br />
+    <p>
+      We gebruiken const, let en var om nieuwe variabelen te maken. Ze werken
+      alle drie net iets anders.
+    </p>
+
+    <p>
+      <i>const</i> gebruiken we om een variabele te maken die altijd dezelfde
+      waarde moet hebben. Zoals bijvoorbeeld het aantal maanden in een jaar, dat
+      is altijd 12, niet de ene keer 11 en de andere keer 12. const monthsInYear
+      = 12;
+    </p>
+
+    <p>
+      <i>let</i> gebruiken we om een variabele te maken die van waarde kan
+      veranderen. Een voorbeeld is de rekening in een restaurant: let
+      rekeningTotaal = 0; rekeningTotaal = rekeningTotaal + 10; rekeningTotaal =
+      rekeningTotaal + 33; rekeningTotaal = rekeningTotaal + 4;
+    </p>
+
+    <p>
+      <i>var</i> is de oude vorm van let, die zul je nog wel tegenkomen op het
+      internet. var werkt een klein beetje anders dan let:
+    </p>
+    <ul>
+      <li>
+        Een variabele gedefinieerd met behulp van een <i>var</i> verklaring is
+        overal bekend de functie het is gedefinieerd in, vanaf het begin van de
+        functie.
+      </li>
+      <li>
+        Een variabele gedefinieerd met behulp van een <i>let</i> verklaring is
+        alleen bekend in het blok het wordt gedefinieerd in, vanaf het moment
+        dat het wordt gedefinieerd.
+      </li>
+    </ul>
+   </div>
+
+   <script src="main.js"></script>
+  </body>
+</html>
