@@ -65,3 +65,21 @@ console.log(someNumber == anotherNumber) //true
 console.log(someNumber === anotherNumber) //false
 console.log(someNumber != anotherNumber) //false
 console.log(someNumber !== anotherNumber) //true
+
+/*** Opdracht 4 ***/
+
+let increment = 1
+console.log(++increment) // 2
+console.log(increment++) // 2
+
+let modulo = 24 % 10
+console.log(modulo) // 4
+
+let division = 24 / 10
+console.log(division) // 2.4
+
+let someNumber2 = 'tekst'
+console.log(! someNumber2) //false
+
+
+

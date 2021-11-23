@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditions</title>
+    <link rel="stylesheet" href="opd_3.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Conditions</h2>
+      <p>
+        Met voorwaardelijke code wordt code bedoeld die alleen uitgevoerd wordt
+        als er aan een bepaalde voorwaarde voldaan wordt. Zo kun je bijvoorbeeld
+        zeggen: als iemand als leeftijd 16 invult, dan moet de tekst "Hey, zo
+        jong ben ik ook!" verschijnen. Dus op voorwaarde dat 16 wordt ingevuld
+        moet iets gebeuren, en anders niet. Dit zal heel veel nodig zijn, want
+        je kan bijvoorbeeld al bij een simpel Mario-spelletje de volgende dingen
+        aanwijzen (zonder dat je de code kent):
+      </p>
+      <ul>
+        <li>Als Mario dood gaat, dan haal je er een leven af</li>
+        <li>
+          Als de eindscore hoger is dan de hoogste score, dan verander je de
+          highscore
+        </li>
+        <li>Als Mario een ster heeft gepakt, dan kan hij niet dood</li>
+      </ul>
+
+      <p>
+        Vaak moet code ook een aantal keer achter elkaar worden uitgevoerd. Dat
+        zou kunnen zien als: zolang aan een bepaalde voorwaarde wordt voldaan,
+        voer je het volgende stukje code uit. Zoiets heet een loop, omdat het
+        een soort looping is (de code start telkens weer overnieuw). Ook dit zul
+        je heel veel tegen komen.
+      </p>
+      <a
+        href="https://www.freecodecamp.org/news/javascript-if-else-and-if-then-js-conditional-statements/"
+        >check here for easy explanation...</a
+      >
+
+      <h3>Opdracht 3.1</h3>
+      <ul>
+        <li>Wat is het verschil tussen == en ===?</li>
+        <p>Double equals (==) is a comparison operator, which transforms the operands having the same type before comparison.</p>
+
+          <p>So, when you compare string with a number, JavaScript converts any string to a number. An empty string is always converts to zero. A string with no numeric value is converts to NaN (Not a Number), which returns false.</p>
+          <p>=== (Triple equals) is a strict equality comparison operator in JavaScript, which returns false for the values which are not of a similar type. This operator performs type casting for equality. If we compare 2 with “2” using ===, then it will return a false value.</p>
+        <li>Wat is het verschil tussen > en >=?</li>
+        <p>> greater than</p>
+        <p>>= greater than or qual</p>
+        <li>En tussen < en <=?</li>
+        <p>< less than</p>
+        <p><= less than or equal</p>
+      </ul>
+
+      <h3>Logical Operators</h3>
+      <ul>
+        <li>&& = AND</li>
+        <li>|| = OR </li>
+        <li>! = NOT</li>
+      </ul>
+    </div>
+
+    <script src="opd_3.js"></script>
+  </body>
+</html>
