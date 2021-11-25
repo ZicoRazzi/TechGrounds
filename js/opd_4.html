@@ -1,21 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="opd_4.css">
-  <title>Functions</title>
-</head>
-<body>
-  <div class="container">
-    <h2>Functions</h2>
-  <p></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="opd_4.css" />
+    <title>Functions</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Functions</h2>
+      <p id="first_paragraph" class="paragraph">
+        Functions are one of the fundamental building blocks in JavaScript. A
+        function in JavaScript is similar to a procedure—a set of statements
+        that performs a task or calculates a value, but for a procedure to
+        qualify as a function, it should take some input and return an output
+        where there is some obvious relationship between the input and the
+        output. To use a function, you must define it somewhere in the scope
+        from which you wish to call it.
+      </p>
+      <p class="paragraph">
+        Functies zijn stukjes code, die meerdere malen gebruikt kunnen worden.
+        De code binnen een functie wordt pas uitgevoerd op het moment dat de
+        functie wordt aangeroepen vanuit een ander deel van het script of vanuit
+        de html pagina waar het script aan verbonden is.>Functies kunnen ook
+        bewerkingen uitvoeren op waarden die aan de functie worden doorgegeven
+        in de vorm van argumenten. Deze worden tussen de haakjes van de
+        functie-aanroep geplaatst en in de functie opgevangen als zgn.
+        parameters. Er zijn ook functies, zonder parameters. In dat geval zijn
+        toch de dubbele haakjes verplicht. Functies kunnen ook waarden
+        retourneren. We hebben eerder alert(), prompt() en confirm() gebruikt.
+        Dat waren zgn. method of functies, behorend bij een object.
+        Bovengenoemde methods horen bij het window-object. De aanroep toont dan
+        ook alle kenmerken van een functie-aanroep: naam, haakjes, indien nodig
+        één of meer argumenten en eventueel een return-waarde.
+      </p>
+      <p id="new_paragraph"></p>
+      <h3 id="title">this is a title</h3>
+      <ul id="test">
+        <li>Custom functies</li>
+        <li>Anonieme functies</li>
+        <li>Ingebouwde functies</li>
+      </ul>
+      <ul id="inner">
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+      </ul>
+      <button>click and check console!</button>
+      <button class="btn">new button</button>
 
-  <button>click and check console!</button>
-
-  <input id="input" type="text">
-  </div>
-  <script src="opd_4.js"></script>
-</body>
+      <input id="input" type="text" oninput=inputLog()/>
+    </div>
+    <script src="opd_4.js"></script>
+  </body>
 </html>

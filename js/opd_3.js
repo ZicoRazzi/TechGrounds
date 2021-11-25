@@ -3,13 +3,13 @@
 
 let x = 4;
 let y = 8;
-if (x == 4 && y == 8) {
+if (x === 4 && y === 8) {
   console.log("Result!");
 }
 
 let x1 = 4;
 let y1 = 8;
-if (x1 == 4 || y1 == 8) {
+if (x1 === 4 || y1 === 8) {
   console.log("Result!");
 }
 //check this exs
@@ -23,7 +23,7 @@ if (!(x2 == 4 || y2 == 8)) {
 
 let x3 = 4;
 let y3 = 8;
-if (x3 == 4 && y3 == 8) {
+if (x3 === 4 && y3 === 8) {
   console.log("Result!");
 } else {
   console.log("Not Results!");
@@ -54,7 +54,7 @@ if (z) {
 
 let z1 = 13;
 
-if (z1 == 3) {
+if (z1 === 3) {
   console.log("Correct!");
 } else {
   console.log("Not correct");
@@ -92,20 +92,20 @@ if (z5 >= 2) {
   console.log("Not correct");
 }
 
-let z6 = 13;
+let z6 = 40;
 
-if (z6 <= 2) {
-  console.log("Correct!");
-} else if (z6 <= 3) {
-  console.log("Correct!");
-} else if (z6 <= 4) {
-  console.log("Correct!");
-} else if (z6 <= 5) {
-  console.log("Correct!");
-} else if (z6 <= 20) {
-  console.log("Correct!");
+if (z6 === 3) {
+  console.log("is gelijk aan 3");
+} else if (z6 > 4) {
+  console.log("groter dan 4");
+} else if (z6 > 11) {
+  console.log("groter dan 11");
+} else if (z6 < 3) {
+  console.log("kleiner dan 3");
+} else if (z6 < 20) {
+  console.log("kleiner dan 20");
 } else {
-  console.log("Not correct");
+  console.log("...");
 }
 
 let month = 1
