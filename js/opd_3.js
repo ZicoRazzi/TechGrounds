@@ -12,13 +12,13 @@ let y1 = 8;
 if (x1 == 4 || y1 == 8) {
   console.log("Result!");
 }
-
+//check this exs
 let x2 = 4;
 let y2 = 8;
-if (x2 == 4 || y2 == 8) {
+if (!(x2 == 4 || y2 == 8)) {
   console.log("Result!");
 } else {
-  console.log("Results!");
+  console.log("Not Result!");
 }
 
 let x3 = 4;
@@ -26,40 +26,22 @@ let y3 = 8;
 if (x3 == 4 && y3 == 8) {
   console.log("Result!");
 } else {
-  console.log("Results!");
-}
-let x4 = 4;
-let y4 = 8;
-if (x4 > 5 && y4 < 10) {
-  console.log("Result!");
-} else {
-  console.log("Results!");
+  console.log("Not Results!");
 }
 
-let x5 = 4;
-let y5 = 8;
-if (x5 >= 11 && y5 >= 20) {
-  console.log("Result!");
-} else {
-  console.log("Results!");
-}
+let x4 = 43
 
-let x6 = 4;
-let y6 = 8;
-if (x6 == 21 || y6 == 23) {
-  console.log("Result!");
+if(x4 > 5 && x4 < 10) {
+  console.log('you are between 6 - 9')
+} else if (x4 >= 11 && x4 <= 20){
+  console.log('you are between 11 - 20')
+} else if (x4 === 21 || x4 === 23) {
+  console.log('you are on 21 or 23')
+} else if (x4 < 35 || 40 < x4 < 45) {
+  console.log('you are lower than 35, or you are between 40 and 45')
 } else {
-  console.log("Results!");
+  console.log ('you are somewhere else')
 }
-
-let x7 = 4;
-let y7 = 8;
-if (x7 < 35 || y7 <= 40 || y7 >= 45) {
-  console.log("Result!");
-} else {
-  console.log("Results!");
-}
-
 /*** Opdracht 2 ***/
 
 let z = 13;
