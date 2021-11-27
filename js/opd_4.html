@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="opd_4.css" />
     <title>Functions</title>
+
+    <style>
+      .new_style{
+        color:blue;
+        font-size: 30px;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -49,10 +56,14 @@
         <li class="item"></li>
         <li class="item"></li>
       </ul>
-      <button>click and check console!</button>
-      <button class="btn">new button</button>
+      <button class="btn1">click and check console!</button>
+      <button class="btn2">new button</button>
+      <button class="btn3" onclick="checkName2()">check name</button>
 
-      <input id="input" type="text" oninput=inputLog()/>
+      <!-- <input id="input" type="text" oninput=inputLog()/> -->
+      <input id="input" type="text"/>
+      <input id="input2" type="text"/>
+      <span class="team_member"></span>
     </div>
     <script src="opd_4.js"></script>
   </body>

@@ -2,7 +2,7 @@
 /*** Opdracht 4.1 ***/
 
 //a
-document.querySelector('button').addEventListener('click', function() {
+document.querySelector('.btn1').addEventListener('click', function() {
   console.log('Tralalalala')
 })
 
@@ -14,24 +14,46 @@ document.querySelector('input').addEventListener('focus', function(e) {
 
   console.log(nameInput.value)
 })
-function logElement (element) {
-  console.log(element)
-}
-const inputData = document.getElementById('input')
-logElement(inputData)
 
-// //c
-// const inputData2 = document.getElementById('input')
-// function inputLog() {
 
-//   console.log(parameter.value)
-// }
-// inputLog(inputData2)
 
+//c
+
+
+/***/
 const printMessage = () => { 
   console.log('this is a message!'); 
 }; 
 printMessage();
+
+
+const input2 = document.getElementById('input')
+input2.onchange = function() {
+   console.log(input2.value)
+};
+
+
+// bonus
+
+const carYear = 2015
+const personYear = 1974
+
+function calculateAge(year) {
+  let currentYear = 2021
+  let result = currentYear - year
+  return result
+}
+
+function checkAndLogAge(year) {
+  if (calculateAge(year) < 10) {
+    console.log('Age is younger than 10 years')
+  } else {
+    console.log('Age is older than 10 years')
+  }
+}
+ checkAndLogAge(carYear)
+ checkAndLogAge(personYear)
+
 
 //d
 function returnExample () {
@@ -74,6 +96,17 @@ document.getElementsByTagName('li')[2].style.color = 'green'
 // })
 
 //IV
+
+const listOfParagraphs = document.querySelectorAll('p')
+
+for (let index = 0; index < listOfParagraphs.length; index++) {
+  const element = listOfParagraphs[index];
+  element.addEventListener('click', function() {
+    element.classList.add('new_style')
+  })
+}
+
+
 let ulList = document.getElementById('test')
 
 ulList.addEventListener('mouseover', function (e) {
@@ -84,20 +117,7 @@ ulList.addEventListener('mouseover', function (e) {
   }, 500)
 }, false)
 
-// document.querySelector('.btn').addEventListener('click', function() {
-//   bgColor = document.querySelectorAll('.item')
-//   this.style.backgroundColor = "orange"
-  
-// })
 
-// function changeBg () {
-//   let bgColor, i
-//   bgColor = document.querySelectorAll('.item')
-//   for (i = 0; i < bgColor.length; i++) {
-//     bgColor[i].style.backgroundColor = 'orange'
-//     console.log(bgColor)
-//   }
-// }
 
 //V
 const inner = document.getElementById('inner')
@@ -115,3 +135,124 @@ function getInnerText () {
   const text = document.getElementById('first_paragraph').innerText
   document.getElementById('new_paragraph').innerHTML = text
 }
+
+//b
+const input = document.getElementById('input')
+input.oninput = function() {
+   console.log(input.value)
+
+};
+
+
+//bonus 
+//I’ve declared a very simple class, and a very simple function. However, the function does not accept arguments, instead, it directly references 2 properties within its execution context. The problem? The properties have never been defined in the function’s particular context. They are part of the class though.
+
+// So by using the call method that every function has, you can call it by overwriting its context. Thus allowing this external function to act as a method of the Person class.
+class Person {
+  constructor(first_name, last_name) {
+    this.f_name = first_name;
+    this.l_name = last_name;
+  }
+
+}
+function greetPerson() {
+  console.log("Hello there ", this.f_name, this.l_name);
+}
+
+let oPerson1 = new Person("Zico", "Razzi");
+let oPerson2 = new Person("Anna", "Valente");
+
+
+greetPerson.call(oPerson1);
+greetPerson.call(oPerson2);
+
+/*** Opdracht 4.3 ***/
+
+//a
+
+const btn = document.querySelector('.btn2')
+function randomNumber(min, max) {
+  
+  const result = Math.floor(Math.random() * (max - min)) + min
+
+  btn.addEventListener('click', function() {
+    return console.log(result)
+  })
+}
+
+randomNumber(1, 12)
+
+//b
+
+function getRandomInt(m) {
+  return Math.floor(Math.random() * m);
+}
+console.log(getRandomInt(100))
+
+//c
+
+function rnd(min,max){
+  return Math.floor(Math.random()*(max-min+1)+min );
+}
+console.log(rnd(0, 6))
+
+
+/*** Opdracht 4.4 ***/
+
+//a
+
+const checkName = function (inputName) {
+  if (
+    inputName == 'Alfi' ||
+    inputName == 'Fatos' ||
+    inputName == 'Michael' ||
+    inputName == 'Haydar' ||
+    inputName == 'Zico'
+  ) {
+    console.log('this is your team member');
+    
+  } else {
+    console.log('Sorry, this person is not from your team');
+    
+  }
+};
+checkName('Zico')
+checkName('Kiki')
+checkName('Ron')
+checkName('Alfi')
+
+//a second option
+
+const names = ['Alfi', 'Vatos', 'MIchael', 'Haydar', 'Zico'];
+        
+function checkName2() {
+    let inputName3 = document.querySelector('#input2').value;
+    const teamNames = names.map(name=>name.toUpperCase());
+    let checkedNames = inputName3.toUpperCase();
+    
+    
+    if (teamNames.includes(checkedNames) === true) {
+        document.querySelector('.team_member').innerHTML = 'this is your team member'
+    }
+    else {
+      document.querySelector('.team_member').innerHTML = 'Sorry, this person is not from your team'
+    }
+}
+//b
+const showName = function (name) {
+  const inputInfo = checkName(name)
+  document.querySelector('.team_member').innerHTML = inputInfo
+  // inputSpan.innerHTML = inputInfo
+  // console.log(inputInfo)
+}
+
+showName('mitos')
+
+//c
+const showName2 = name => {
+  const inputInfo = checkName(name)
+  const inputSpan = document.querySelector('.team_member')
+  inputSpan.innerHTML = inputInfo
+}
+
+showName2('Fatos')
