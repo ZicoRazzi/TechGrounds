@@ -26,13 +26,9 @@ button{
 }
 input{
  
-  margin-left: 20px;
+  
   border-radius: 10px;
   width: 200px;
   height: 40px;
   padding: 5px;
-}
-.new_style{
-  color:blue;
-  font-size: 30px;
 }

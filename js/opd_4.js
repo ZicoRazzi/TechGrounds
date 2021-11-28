@@ -144,27 +144,7 @@ input.oninput = function() {
 };
 
 
-//bonus 
-//I’ve declared a very simple class, and a very simple function. However, the function does not accept arguments, instead, it directly references 2 properties within its execution context. The problem? The properties have never been defined in the function’s particular context. They are part of the class though.
 
-// So by using the call method that every function has, you can call it by overwriting its context. Thus allowing this external function to act as a method of the Person class.
-class Person {
-  constructor(first_name, last_name) {
-    this.f_name = first_name;
-    this.l_name = last_name;
-  }
-
-}
-function greetPerson() {
-  console.log("Hello there ", this.f_name, this.l_name);
-}
-
-let oPerson1 = new Person("Zico", "Razzi");
-let oPerson2 = new Person("Anna", "Valente");
-
-
-greetPerson.call(oPerson1);
-greetPerson.call(oPerson2);
 
 /*** Opdracht 4.3 ***/
 
@@ -221,32 +201,50 @@ checkName('Kiki')
 checkName('Ron')
 checkName('Alfi')
 
-//a second option
+//a+b another option
 
-const names = ['Alfi', 'Vatos', 'MIchael', 'Haydar', 'Zico'];
+const names = ['Alfi', 'Fatos', 'Michael', 'Haydar', 'Zico']
         
 function checkName2() {
-    let inputName3 = document.querySelector('#input2').value;
-    const teamNames = names.map(name=>name.toUpperCase());
-    let checkedNames = inputName3.toUpperCase();
+    let inputName3 = document.querySelector('#input2').value
+    const teamNames = names.map(function (name) {
+      return name.toUpperCase()})
+    let checkedNames = inputName3.toUpperCase()
     
     
     if (teamNames.includes(checkedNames) === true) {
-        document.querySelector('.team_member').innerHTML = 'this is your team member'
+        document.querySelector('.team_member').innerHTML = 'This is your team member'
     }
     else {
       document.querySelector('.team_member').innerHTML = 'Sorry, this person is not from your team'
     }
 }
-//b
-const showName = function (name) {
-  const inputInfo = checkName(name)
-  document.querySelector('.team_member').innerHTML = inputInfo
-  // inputSpan.innerHTML = inputInfo
-  // console.log(inputInfo)
-}
 
-showName('mitos')
+const btn3 = document.querySelector('.btn3').addEventListener('click', function() {
+  checkName2()
+})
+
+
+
+//c
+
+// let checkName2 = () => {
+//   let inputName3 = document.querySelector('#input2').value;
+//   const teamNames = names.map(name=>name); //als je gebruik toUpperCase() mag de namen met de kleine letters typen
+//   let checkedNames = inputName3;
+
+//   teamNames.includes(checkedNames) === true ? document.querySelector('.team_member').innerHTML = 'this is your team member' : document.querySelector('.team_member').innerHTML = 'Sorry, this person is not from your team'
+// }
+
+// const showName = function (name) {
+//   const inputInfo = checkName(name)
+//   const inputSpan = document.querySelector('.team_member')
+//   inputSpan.innerHTML = inputInfo
+  
+  
+// }
+
+// showName('Alfi')
 
 //c
 const showName2 = name => {
@@ -256,3 +254,26 @@ const showName2 = name => {
 }
 
 showName2('Fatos')
+
+//bonus 
+/*I’ve declared a very simple class, and a very simple function. However, the function does not accept arguments, instead, it directly references 2 properties within its execution context. The problem? The properties have never been defined in the function’s particular context. They are part of the class though.
+
+So by using the call method that every function has, you can call it by overwriting its context. Thus allowing this external function to act as a method of the Person class.*/
+
+class Person {
+  constructor(first_name, last_name) {
+    this.f_name = first_name;
+    this.l_name = last_name;
+  }
+
+}
+function greetPerson() {
+  console.log("Hello there ", this.f_name, this.l_name);
+}
+
+let oPerson1 = new Person("Zico", "Razzi");
+let oPerson2 = new Person("Anna", "Valente");
+
+
+greetPerson.call(oPerson1);
+greetPerson.call(oPerson2);
