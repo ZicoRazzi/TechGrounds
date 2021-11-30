@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 10px;
+  text-align: center;
+}
+.container{
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #a1a1a1;
+  overflow: hidden;
+  font-size: 2rem;
+}
+
+.clock{
+  width: 30rem;
+  height: 30rem;
+  border: 7px solid #a1a1a1;
+  box-shadow: -4px -4px 10px rgba(100, 100, 100, 0.5),
+      inset 4px 4px 10px rgba(9, 9, 9, 0.5),
+      inset -4px -4px 10px rgba(100, 100, 100, 0.5),
+      4px 4px 10px rgba(9, 9, 9, 0.3);
+  border-radius: 50%;
+  padding: 2rem;
+}
+.outer_clock_face{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background: #a1a1a1;
+  overflow: hidden;
+}
+.outer_clock_face::after{
+  transform: rotate(90deg);
+}
+.outer_clock_face::before,
+.outer_clock_face::after,
+.outer_clock_face .marking{
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background: #ea01ff;
+  z-index: 0;
+  left:49%;
+}
+.outer_clock_face .marking{
+  background: #bdbdcb;
+  width: 3px;
+}
+.outer_clock_face .marking.marking_1{
+  transform: rotate(30deg);
+}
+.outer_clock_face .marking.marking_2{
+  transform: rotate(60deg);
+}
+.outer_clock_face .marking.marking_3{
+  transform: rotate(120deg);
+}
+.outer_clock_face .marking.marking_4{
+  transform: rotate(150deg);
+}
+.inner_clock_face{
+  position: absolute;
+  top: 10%;
+  left:10%;
+  width: 80%;
+  height: 80%;
+  background: #a1a1a1;
+  border-radius: 100%;
+  z-index: 1;
+}
+.inner_clock_face::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 18px;
+  margin-left: -9px;
+  margin-top: -6px;
+  background: #282828;
+  z-index: 11;
+}
+
+.hand{
+  position: absolute;
+  width: 50%;
+  right: 50%;
+  height: 6px;
+  background: #b60f6b;
+  top:50%;
+  border-radius: 6px;
+  transform-origin: 100%; /* bepaalt de oorsprong voor de transformaties */
+  transform: rotate(90deg);
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hand.hour_hand{
+  width: 30%;
+  z-index: 3;
+}
+
+.hand.min_hand{
+  height: 3px;
+  z-index: 10;
+  width: 40%;
+}
+
+.hand.second_hand{
+  background: #15ff00;
+  width: 45%;
+  height: 2px;
+}
