@@ -6,14 +6,6 @@ const images = document.querySelector('.slider_container').children;
 const totalImages = images.length;
 let index = 0
 
-// const timer
-
-// autoSlider()
-
-// function autoSlider () {
-//   timer = setTimeout(nextImage, 1000)
-// }
-
 prev.addEventListener('click', () => {
   nextImage('next')
 })

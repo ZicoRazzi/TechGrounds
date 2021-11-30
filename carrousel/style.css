@@ -32,14 +32,14 @@ h2{
   position: relative;
   width: 800px;
   height: 452px;
-  /* border-radius: 20px; */
+  
   transition: all 0.8s ease;
 }
 .slider_container{
   padding-top: calc((9/16)*100%);
   background: #222;
   position: relative;
-  /* border-radius: 20px; */
+  
 }
 
 img{
