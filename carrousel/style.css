@@ -33,7 +33,7 @@ h2{
   width: 800px;
   height: 452px;
   /* border-radius: 20px; */
-  transition: all 0.3s ease;
+  transition: all 0.8s ease;
 }
 .slider_container{
   padding-top: calc((9/16)*100%);
@@ -48,7 +48,7 @@ img{
   position: absolute;
   top:0;
   left:0;
-  transition: all 0.3s ease;
+  transition: all 0.8s ease;
   /* border-radius: 20px; */
 }
 .image{

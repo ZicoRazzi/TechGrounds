@@ -4,11 +4,22 @@ const prev = document.querySelector('.btn_prev')
 const next = document.querySelector('.btn_next')
 const images = document.querySelector('.slider_container').children;
 const totalImages = images.length;
-let index = 0;
+let index = 0
+
+// const timer
+
+// autoSlider()
+
+// function autoSlider () {
+//   timer = setTimeout(nextImage, 1000)
+// }
 
 prev.addEventListener('click', () => {
   nextImage('next')
 })
+const timer = setInterval(() => {
+  nextImage('next')
+}, 3000)
 
 next.addEventListener('click', () => {
   nextImage('prev')
@@ -35,3 +46,5 @@ function nextImage(direction) {
 
   
 }
+
+
