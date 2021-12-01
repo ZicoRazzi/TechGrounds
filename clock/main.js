@@ -49,17 +49,19 @@ function setClock() {
     hourHand.transitionDuration = ".05s";
   }
 
-  const now2 = new Date();
+  const now2 = new Date()//.toLocaleString("en-US", {timeZone: "America/New_York"})
 
-  const seconds2 = now2.getSeconds();
+
+
+  const seconds2 = now2.getSeconds()//.toLocaleString("en-US", {timeZone: "America/New_York"})
   const secondsDegrees2 = (seconds2 / 60) * 360 + 90;
   secondHand2.style.transform = `rotate(${secondsDegrees2}deg)`;
 
-  const mins2 = now2.getMinutes();
+  const mins2 = now2.getMinutes()//.toLocaleString("en-US", {timeZone: "America/New_York"})
   const minsDegrees2 = (mins2 / 60) * 360 + (seconds2 / 60) * 6 + 90;
   minsHand2.style.transform = `rotate(${minsDegrees2}deg)`;
 
-  const hour2 = now2.getHours();
+  const hour2 = now2.getHours()//.toLocaleString("en-US", {timeZone: "America/New_York"})
   const hourDegrees2 = (hour2 / 12) * 360 + (mins2 / 60) * 30 + 90;
   hourHand2.style.transform = `rotate(${hourDegrees2}deg)`;
 
@@ -114,6 +116,7 @@ function setClock() {
 setInterval(setClock, 1000);
 
 setClock();
+
 function updateClocks() {
   const now1 = new Date();
   const now2 = new Date();
