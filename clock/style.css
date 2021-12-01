@@ -5,31 +5,46 @@
   padding: 0;
   box-sizing: border-box;
 }
-html{
-  font-size: 10px;
-  text-align: center;
-}
+
 .container{
-  max-width: 100%;
+  min-width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   background: #a1a1a1;
   overflow: hidden;
-  font-size: 2rem;
+  font-family: 'Genos', sans-serif;
+  
+}
+
+
+.timezone{
+  display: block;
+  text-align: center;
+  font-size: 40px;
+  font-style: 600;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+  margin: 80px auto;
+}
+
+.clock_container{
+  padding: 50px;
 }
 
 .clock{
-  width: 30rem;
-  height: 30rem;
+  width: 360px;
+  height: 360px;
   border: 7px solid #a1a1a1;
   box-shadow: -4px -4px 10px rgba(100, 100, 100, 0.5),
       inset 4px 4px 10px rgba(9, 9, 9, 0.5),
       inset -4px -4px 10px rgba(100, 100, 100, 0.5),
       4px 4px 10px rgba(9, 9, 9, 0.3);
   border-radius: 50%;
-  padding: 2rem;
+  padding: 20px;
+  margin-bottom: 110px;
 }
 .outer_clock_face{
   position: relative;
@@ -37,7 +52,7 @@ html{
   height: 100%;
   border-radius: 100%;
   background: #a1a1a1;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .outer_clock_face::after{
   transform: rotate(90deg);
@@ -54,7 +69,7 @@ html{
   left:49%;
 }
 .outer_clock_face .marking{
-  background: #bdbdcb;
+  background: #f5f5f5;
   width: 3px;
 }
 .outer_clock_face .marking.marking_1{
@@ -89,7 +104,7 @@ html{
   border-radius: 18px;
   margin-left: -9px;
   margin-top: -6px;
-  background: #282828;
+  background: #424242;
   z-index: 11;
 }
 
@@ -101,24 +116,59 @@ html{
   background: #b60f6b;
   top:50%;
   border-radius: 6px;
+  transition: all 0.05s;
   transform-origin: 100%; /* bepaalt de oorsprong voor de transformaties */
-  transform: rotate(90deg);
+  transform: rotate(90deg); /* 90deg omdat begin punt moet op 12u staan */
   transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
 
-.hand.hour_hand{
-  width: 30%;
+#hour_hand,
+#hour_hand_2,
+#hour_hand_3{
+  width: 40%;
   z-index: 3;
 }
 
-.hand.min_hand{
+#min_hand,
+#min_hand_2,
+#min_hand_3{
   height: 3px;
   z-index: 10;
-  width: 40%;
+  width: 48%;
 }
 
-.hand.second_hand{
+#second_hand,
+#second_hand_2,
+#second_hand_3{
   background: #15ff00;
-  width: 45%;
+  width: 50%;
   height: 2px;
+} 
+
+@media (max-width: 480px) {
+  .clock {
+    width: 200px;
+    height: 200px;
+    padding: 12px;
+  }
+}
+@media (max-width: 600px) {
+  
+  .clock {
+    width: 300px;
+    height: 300px;
+  
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .clock {
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    padding: 16px;
+    
+  }
 }

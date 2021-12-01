@@ -101,16 +101,16 @@ console.log(evenNumbers);
 
 //d+e+f
 
-for (let i = 1; i <= 10; i++) {
-  console.log(i);
+// for (let i = 1; i <= 10; i++) {
+//   console.log(i);
 
-  for (let y = 1; y <= 20; y++) {
-    console.log(y);
-  }
-  for (let x = 1; x <= 30; x++) {
-    console.log(x);
-  }
-}
+//   for (let y = 1; y <= 20; y++) {
+//     console.log(y);
+//   }
+//   for (let x = 1; x <= 30; x++) {
+//     console.log(x);
+//   }
+// }
 
 //g
 let fibonacci = [0, 1];

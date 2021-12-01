@@ -1,29 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clock</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <div class="clock">
-      <div class="outer_clock_face">
-        <div class="marking marking_1"></div>
-        <div class="marking marking_2"></div>
-        <div class="marking marking_3"></div>
-        <div class="marking marking_4"></div>
-        <div class="inner_clock_face">
-          <div class="hand hour_hand"></div>
-          <div class="hand min_hand"></div>
-          <div class="hand second_hand"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Genos:ital@1&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="container">
+
+  
+      <div class="clock_container">
+        <div class="timezone"><h2>New York</h2></div>  
+        <div class="clock">
+          <div class="outer_clock_face">
+            <div class="marking marking_1"></div>
+            <div class="marking marking_2"></div>
+            <div class="marking marking_3"></div>
+            <div class="marking marking_4"></div>
+            <div class="inner_clock_face">
+              <div class="hand" id="hour_hand"></div>
+              <div class="hand" id="min_hand"></div>
+              <div class="hand" id="second_hand"></div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+      <div class="clock_container">
+        <div class="timezone"><h2>Amsterdam</h2></div>
+        <div class="clock">
+          <div class="outer_clock_face">
+            <div class="marking marking_1"></div>
+            <div class="marking marking_2"></div>
+            <div class="marking marking_3"></div>
+            <div class="marking marking_4"></div>
+            <div class="inner_clock_face">
+              <div class="hand" id="hour_hand_2"></div>
+              <div class="hand" id="min_hand_2"></div>
+              <div class="hand" id="second_hand_2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clock_container">
+        <div class="timezone"><h2>Tokyo</h2></div>
+        <div class="clock">
+          <div class="outer_clock_face">
+            <div class="marking marking_1"></div>
+            <div class="marking marking_2"></div>
+            <div class="marking marking_3"></div>
+            <div class="marking marking_4"></div>
+            <div class="inner_clock_face">
+              <div class="hand" id="hour_hand_3"></div>
+              <div class="hand" id="min_hand_3"></div>
+              <div class="hand" id="second_hand_3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <script src="main.js"></script>
-</body>
+    </div>
+   
+
+    <script src="main.js"></script>
+  </body>
 </html>

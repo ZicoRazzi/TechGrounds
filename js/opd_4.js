@@ -205,30 +205,30 @@ console.log(rnd(0, 6))
 
 //option2
 
-const checkName = log => {
-  log = document.querySelector('#input2').value
-  console.log(log)
-  switch (log) {
-    case 'Alfi':
-    console.log('this is your team member!')
-    return `${'this is your team member!'}`
-    case 'Fatos':
-    console.log('this is your team member!')
-    return `${'this is your team member!'}`
-    case 'Michael':
-    console.log('this is your team member!')
-    return `${'this is your team member!'}`
-    case 'Zico':
-    console.log('this is your team member!')
-    return `${'this is your team member!'}`
+// const checkName = log => {
+//   log = document.querySelector('#input2').value
+//   console.log(log)
+//   switch (log) {
+//     case 'Alfi':
+//     console.log('this is your team member!')
+//     return `${'this is your team member!'}`
+//     case 'Fatos':
+//     console.log('this is your team member!')
+//     return `${'this is your team member!'}`
+//     case 'Michael':
+//     console.log('this is your team member!')
+//     return `${'this is your team member!'}`
+//     case 'Zico':
+//     console.log('this is your team member!')
+//     return `${'this is your team member!'}`
     
-    default: console.log('sorry do not trust this person')
-    return 'sorry do not trust this person'
-  }
-}
-const btn3 = document.querySelector('.btn3').addEventListener('click', () => {
-      checkName()
-    })
+//     default: console.log('sorry do not trust this person')
+//     return 'sorry do not trust this person'
+//   }
+// }
+// const btn3 = document.querySelector('.btn3').addEventListener('click', () => {
+//       checkName()
+//     })
     
 
 
@@ -236,26 +236,26 @@ const btn3 = document.querySelector('.btn3').addEventListener('click', () => {
 
 //option 1
 
-//const names = ['Alfi', 'Fatos', 'Michael', 'Haydar', 'Zico']
+const names = ['Alfi', 'Fatos', 'Michael', 'Haydar', 'Zico']
         
-// function checkName2() {
-//     let inputName3 = document.querySelector('#input2').value
-//     const teamNames = names.map(function (name) {
-//       return name.toUpperCase()})
-//     let checkedNames = inputName3.toUpperCase()
+function checkName2() {
+    let inputName3 = document.querySelector('#input2').value
+    const teamNames = names.map(function (name) {
+      return name.toUpperCase()})
+    let checkedNames = inputName3.toUpperCase()
     
     
-//     if (teamNames.includes(checkedNames) === true) {
-//         document.querySelector('.team_member').innerHTML = 'This is your team member'
-//     }
-//     else {
-//       document.querySelector('.team_member').innerHTML = 'Sorry, this person is not from your team'
-//     }
-// }
+    if (teamNames.includes(checkedNames) === true) {
+        document.querySelector('.team_member').innerHTML = 'This is your team member'
+    }
+    else {
+      document.querySelector('.team_member').innerHTML = 'Sorry, this person is not from your team'
+    }
+}
 
-// const btn3 = document.querySelector('.btn3').addEventListener('click', () => {
-//   checkName2()
-// })
+const btn3 = document.querySelector('.btn3').addEventListener('click', () => {
+  checkName2()
+})
 
 
 
