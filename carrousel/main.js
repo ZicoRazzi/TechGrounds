@@ -1,5 +1,3 @@
-
-
 const prev = document.querySelector('.btn_prev')
 const next = document.querySelector('.btn_next')
 const images = document.querySelector('.slider_container').children;
@@ -34,9 +32,7 @@ function nextImage(direction) {
   for(let i = 0; i < images.length; i++) {
     images[i].classList.remove('first')
   }
-  images[index].classList.add('first')
-
-  
+  images[index].classList.add('first')  
 }
 
 

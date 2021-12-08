@@ -10,11 +10,10 @@ const secondHand3 = document.getElementById("second_hand_3");
 const minsHand3 = document.getElementById("min_hand_3");
 const hourHand3 = document.getElementById("hour_hand_3");
 
-// function setClock(now, secondHand, minsHand, hourHand) {
+// function setClock(now, secondHand, minsHand, hourHand)
 function setClock() {
-
   const now = new Date();
-  
+
   //New York
   const seconds = now.getSeconds();
   const secondsDegrees = (seconds / 60) * 360 + 90; //90 deg
@@ -52,15 +51,15 @@ function setClock() {
 
   //Amsterdam
 
-  const seconds2 = now.getSeconds()
+  const seconds2 = now.getSeconds();
   const secondsDegrees2 = (seconds2 / 60) * 360 + 90;
   secondHand2.style.transform = `rotate(${secondsDegrees2}deg)`;
 
-  const mins2 = now.getMinutes()
+  const mins2 = now.getMinutes();
   const minsDegrees2 = (mins2 / 60) * 360 + (seconds2 / 60) * 6 + 90;
   minsHand2.style.transform = `rotate(${minsDegrees2}deg)`;
 
-  const hour2 = now.getHours()
+  const hour2 = now.getHours();
   const hourDegrees2 = (hour2 / 12) * 360 + (mins2 / 60) * 30 + 90;
   hourHand2.style.transform = `rotate(${hourDegrees2}deg)`;
 
@@ -82,7 +81,7 @@ function setClock() {
     hourHand2.transitionDuration = ".05s";
   }
 
-//Tokyo
+  //Tokyo
 
   const seconds3 = now.getSeconds();
   const secondsDegrees3 = (seconds3 / 60) * 360 + 90;
@@ -138,4 +137,3 @@ setClock();
 //at 0 = 0deg 100% = 360deg
 //(seconds / 60) = % als seconds = 60 / 60 = 1 * 360deg
 //(seconds / 60) * 360
-

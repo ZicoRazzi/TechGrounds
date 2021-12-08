@@ -22,29 +22,29 @@ console.log(fruits[0], fruits[1]);
 // option 2
 
 //d+e+f
-const getRandomIndex = () => {
-  // const fruitsLength = fruits.length
-  let randomIndex = Math.floor(Math.random() * 100);
-  // let randomFruit = randomInd
-  let randomFruit = randomIndex % fruits.length;
-  document.querySelector("span").innerHTML = fruits[randomFruit];
-};
-document.querySelector("button").addEventListener("click", () => {
-  getRandomIndex();
+// const getRandomIndex = () => {
+  
+//   let randomIndex = Math.floor(Math.random() * 100);
+  
+//   let randomFruit = randomIndex % fruits.length;
+//   document.querySelector("span").innerHTML = fruits[randomFruit];
+// };
+// document.querySelector("button").addEventListener("click", () => {
+//   getRandomIndex();
 
   // optie 2
 
-  // const getRandomInd = () => {
-  //   const fruitsLength = fruits.length;
-  //   let randomInd = Math.floor(Math.random() * fruitsLength);
-  //   let randomFruit = randomInd;
+  const getRandomInd = () => {
+    const fruitsLength = fruits.length;
+    let randomInd = Math.floor(Math.random() * fruitsLength);
+    let randomFruit = randomInd;
 
-  //   document.querySelector("span").innerHTML = fruits[randomFruit];
-  // };
-  // document.querySelector("button").addEventListener("click", () => {
-  //   getRandomInd();
-  // });
-});
+    document.querySelector("span").innerHTML = fruits[randomFruit];
+  };
+  document.querySelector("button").addEventListener("click", () => {
+    getRandomInd();
+  });
+
 fruits.push("banaan", "kersen", "persik");
 console.log(fruits.length);
 fruits[0] = "peer";
@@ -101,16 +101,19 @@ console.log(evenNumbers);
 
 //d+e+f
 
-// for (let i = 1; i <= 10; i++) {
-//   console.log(i);
+for (let i = 0; i <= 3; i++) {
+  console.log('i: ' + i)
 
-//   for (let y = 1; y <= 20; y++) {
-//     console.log(y);
-//   }
-//   for (let x = 1; x <= 30; x++) {
-//     console.log(x);
-//   }
-// }
+  for (let y = 0; y <= 10; y++) {
+    console.log('y: ' + y)
+  }
+  for (let x = 0; x <= 20; x++, x++) {
+    console.log('x: ' + x)
+  }
+  for (let w = 0; w <= 30; w++, w++, w++ ){
+    console.log('w: ' + w)
+  }
+}
 
 //g
 let fibonacci = [0, 1];

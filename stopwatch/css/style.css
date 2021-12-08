@@ -29,7 +29,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Digital-7", sans-serif;
+  font-family: 'Digital-7', sans-serif;
   background-image: url(/stopwatch/img/walnut-wood-bg.jpg);
 }
 
@@ -63,8 +63,7 @@ a {
 }
 
 @-webkit-keyframes blink {
-  0%,
-  100% {
+  0%, 100% {
     opacity: 1;
   }
   30% {
@@ -73,8 +72,7 @@ a {
 }
 
 @keyframes blink {
-  0%,
-  100% {
+  0%, 100% {
     opacity: 1;
   }
   30% {
@@ -102,7 +100,7 @@ a {
   background-color: transparent;
   cursor: pointer;
   font-size: 60px;
-  font-family: "Digital-7", sans-serif;
+  font-family: 'Digital-7', sans-serif;
 }
 
 @media (max-width: 480px) {
@@ -130,17 +128,18 @@ a {
     font-size: 30px;
   }
 }
+@media (min-width: 540px) and (max-width: 768px){
+  .stopwatch_contain .timer_display {
+      font-size: 80px;
+    }
+    
+  .buttons  .start,
+  .buttons  .pause,
+  .buttons  .reset {
+      width: 80px;
+      height: 40px;
+      font-size: 40px;
+    }
+  }
 
-@media (min-width: 540px) and (max-width: 768px) {
-  .stopwatch_container .timer_display {
-    font-size: 80px;
-  }
-  .buttons .start,
-  .buttons .pause,
-  .buttons .reset {
-    width: 120px;
-    height: 40px;
-    font-size: 40px;
-  }
-}
 /*# sourceMappingURL=style.css.map */
