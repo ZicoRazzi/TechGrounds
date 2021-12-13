@@ -30,7 +30,6 @@ h2{
   position: relative;
   width: 800px;
   height: 452px;
-  
   transition: all 0.8s ease;
 }
 .slider_container{
@@ -46,7 +45,7 @@ img{
   position: absolute;
   top:0;
   left:0;
-  transition: all .5s ease;
+  transition: transform .5s ease-in-out
   
 }
 
@@ -88,3 +87,38 @@ img{
 .btn_next:active{
   background:rgba(255, 255, 255, 0.3);
 }
+/* .slideInLeft {
+  animation-name: animateInLeft;
+  z-index: 1000;
+}
+
+.slideInRight {
+  animation-name: animateInRight;
+  z-index: 1000;
+}
+
+.slideOutLeft {
+  transform: translateX(-100%);
+}
+
+.slideOutRight {
+  transform: translateX(100%);
+}
+
+@keyframes animateInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes animateInRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+} */

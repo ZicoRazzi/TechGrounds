@@ -4,8 +4,10 @@ const images = document.querySelector('.slider_container').children;
 const totalImages = images.length;
 let index = 0
 
+
 prev.addEventListener('click', () => {
   nextImage('next')
+  
 })
 const timer = setInterval(() => {
   nextImage('next')

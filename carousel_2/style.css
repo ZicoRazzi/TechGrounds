@@ -1,0 +1,118 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #5b6467;
+  background-image: linear-gradient(315deg, #5b6467 0%, #8b939a 74%);
+}
+.slider {
+  width: 680px;
+  height: 460px;
+  position: relative;
+  box-shadow: 3px 3px 13px #5b6467, -3px -3px 23px #5b6467;
+  cursor: pointer;
+  overflow-x: hidden;
+}
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-size: cover;
+  transform: translateX(100%);
+}
+.slide::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: 0, 0, 0, 0.685;
+  z-index: -1;
+}
+.first {
+  transition: 0.5s ease-in-out transform;
+}
+.slide.active {
+  transform: translateX(0);
+}
+.slide_1 {
+  background-image: url(./img/img_1.jpg);
+}
+.slide_2 {
+  background-image: url(./img/img_2.png);
+}
+.slide_3 {
+  background-image: url(./img/img_3.jpg);
+}
+.slide_4 {
+  background-image: url(./img/img_4.jpg);
+}
+.slide_5 {
+  background-image: url(./img/img_5.jpg);
+}
+
+.button-prev,
+.button-next {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 10%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.1);
+}
+.button-next {
+  left: auto;
+  right: 0;
+}
+
+.button_prev:active,
+.button_next:active {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.4);
+  display: inline-block;
+  margin: 20px;
+  cursor: pointer;
+}
+.dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+.dot.active {
+  background: rgb(255, 60, 0);
+}
+
+@media (max-width: 768px) {
+  .container {
+    height: auto;
+    padding-top: 50px;
+  }
+}
+@media (max-width: 540px) {
+  .slider {
+    width: 90%;
+  }
+}
