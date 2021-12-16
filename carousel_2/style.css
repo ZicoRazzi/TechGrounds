@@ -76,16 +76,18 @@
   border: none;
   cursor: pointer;
   outline: none;
-
-  background: rgba(255, 255, 255, 0.1);
+  /* background: rgba(255, 255, 255, 0.1); */
 }
 .button-next {
   left: auto;
   right: 0;
 }
-
-.button_prev:active,
-.button_next:active {
+.button-prev:hover,
+.button-next:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.button-prev:active,
+.button-next:active {
   background: rgba(255, 255, 255, 0.4);
 }
 

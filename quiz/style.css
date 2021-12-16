@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Indie Flower', cursive;
+}
+.button {
+  font-family: 'Indie Flower', cursive;
+  width: 140px;
+  height: 60px;
+  outline: none;
+  border: none;
+  background-color: #088181;
+  box-shadow: rgb(177, 177, 177) 3px 3px 8px, rgb(255, 255, 255) -3px -3px 8px;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #1abebd;
+}
+.start_button {
+  display: block;
+}
+.wrong {
+  background-color: #d4282c;
+}
+.correct {
+  background-color: #54e06d;
+}
+.quiz_container {
+  text-align: center;
+  min-height: 600px;
+}
+.quiz_content {
+  width: 400px;
+  min-height: 500px;
+  background-color: #088181;
+  text-align: center;
+  padding: 20px;
+  /* margin-bottom: 20px; */
+}
+.prev_button,
+.next_button {
+  margin: 20px;
+}
+.quiz_title {
+  width: 95%;
+  height: 50px;
+  text-align: center;
+  margin: 10px auto;
+  font-size: 40px;
+}
+.quiz_span {
+  width: 95%;
+  height: 50px;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 30px;
+}
+.quiz_quistion {
+  display: block;
+  width: 95%;
+  margin: 10px auto;
+  height: 100px;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 20px 30px;
+  font-size: 40px;
+}
+.quiz_answerR {
+  width: 95%;
+  height: 50px;
+  margin: 10px auto;
+  display: flex;
+}
+.quiz_answerL {
+  width: 95%;
+  height: 50px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.number {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: #088181;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.answer_right {
+  width: 85%;
+  height: 50px;
+  background-color: #fff;
+  position: relative;
+  font-size: 30px;
+}
+.answer_right::after,
+.answer_right::after,
+.answer_right::after {
+  position: absolute;
+  content: '';
+  width: 25px;
+  height: 50px;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  top: 0;
+  left: 0;
+  background-color: #088181;
+}
+.answer_left {
+  width: 80%;
+  height: 50px;
+  background-color: #fff;
+  position: relative;
+  font-size: 30px;
+}
+.answer_left::after,
+.answer_left::after {
+  position: absolute;
+  content: '';
+  width: 25px;
+  height: 50px;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+  right: 0;
+  top: 0;
+  background-color: #088181;
+}

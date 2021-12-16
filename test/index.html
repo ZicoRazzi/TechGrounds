@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/challenge_6/CSS/style.css" />
+
+    <script type="text/javascript">
+      function update() {
+        var bigNumArry = new Array(
+          '',
+          ' thousand',
+          ' million',
+          ' billion',
+          ' trillion',
+          ' quadrillion',
+          ' quintillion'
+        );
+
+        var output = '';
+        var numString = document.getElementById('number').value;
+        var finlOutPut = new Array();
+
+        if (numString == '0') {
+          document.getElementById('container').innerHTML = 'Zero';
+          return;
+        }
+
+        if (numString == 0) {
+          document.getElementById('container').innerHTML =
+            'messeg tell to enter numbers';
+          return;
+        }
+
+        var i = numString.length;
+        i = i - 1;
+
+        //cut the number to groups of three digits and add them to the Arry
+        while (numString.length > 3) {
+          var triDig = new Array(3);
+          triDig[2] = numString.charAt(numString.length - 1);
+          triDig[1] = numString.charAt(numString.length - 2);
+          triDig[0] = numString.charAt(numString.length - 3);
+
+          var varToAdd = triDig[0] + triDig[1] + triDig[2];
+          finlOutPut.push(varToAdd);
+          i--;
+          numString = numString.substring(0, numString.length - 3);
+        }
+        finlOutPut.push(numString);
+        finlOutPut.reverse();
+
+        //convert each group of three digits to dutch word
+        //if all digits are zero the triConvert
+        //function return the string "dontAddBigSufix"
+        for (j = 0; j < finlOutPut.length; j++) {
+          finlOutPut[j] = triConvert(parseInt(finlOutPut[j]));
+        }
+
+        var bigScalCntr = 0; //this int mark the million billion trillion... Arry
+
+        for (b = finlOutPut.length - 1; b >= 0; b--) {
+          if (finlOutPut[b] != 'dontAddBigSufix') {
+            finlOutPut[b] = finlOutPut[b] + bigNumArry[bigScalCntr] + ' , ';
+            bigScalCntr++;
+          } else {
+            //replace the string at finlOP[b] from "dontAddBigSufix" to empty String.
+            finlOutPut[b] = ' ';
+            bigScalCntr++; //advance the counter
+          }
+        }
+
+        //convert The output Arry to , more printable string
+        for (n = 0; n < finlOutPut.length; n++) {
+          output += finlOutPut[n];
+        }
+
+        document.getElementById('container').innerHTML = output; //print the output
+      }
+
+      //simple function to convert from numbers to words from 1 to 999
+      function triConvert(num) {
+        var ones = new Array(
+          '',
+          ' een',
+          ' twee',
+          ' drie',
+          ' vier',
+          'vijf',
+          'zes',
+          ' zeven',
+          ' acht',
+          ' negen',
+          ' tien',
+          ' elf',
+          ' twaalf',
+          ' dertien',
+          ' veertien',
+          ' vijftien',
+          ' zestien',
+          ' zeventien',
+          ' achttien',
+          ' negentien'
+        );
+        var tens = new Array(
+          '',
+          '',
+          ' twintig',
+          ' dertig',
+          ' veertig',
+          ' vijftig',
+          ' zestig',
+          ' zeventig',
+          ' tachtig',
+          ' negentig'
+        );
+        var hundred = ' honderd';
+        var output = '';
+        var numString = num.toString();
+
+        if (num == 0) {
+          return 'dontAddBigSufix';
+        }
+        //the case of 10, 11, 12 ,13, .... 19
+        if (num < 20) {
+          output = ones[num];
+          return output;
+        }
+
+        //100 and more
+        if (numString.length == 3) {
+          output = ones[parseInt(numString.charAt(0))] + hundred;
+          output += ones[parseInt(numString.charAt(2))] + 'en';
+          output += tens[parseInt(numString.charAt(1))];
+          return output;
+        }
+
+        output += tens[parseInt(numString.charAt(0))];
+        output += ones[parseInt(numString.charAt(1))];
+
+        return output;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="number" size="70" onkeyup="update();" /*this code
+    prevent non numeric letters*/ onkeydown="return (event.ctrlKey ||
+    event.altKey || (47<event.keyCode && event.keyCode<58 &&
+    event.shiftKey==false) || (95<event.keyCode && event.keyCode<106) ||
+    (event.keyCode==8) || (event.keyCode==9) || (event.keyCode>34 &&
+    event.keyCode<40) || (event.keyCode==46) )"/>
+    <br />
+    <div id="container">Here The Numbers Printed</div>
+  </body>
+</html>

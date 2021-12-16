@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="chal6.scss" />
+    <title>chal6</title>
+  </head>
+  ​<style>
+    .uitkomst {
+      width: 300px;
+      height: 100px;
+      border: black;
+    }
+  </style>
+  <body>
+    <input type="number" id="input" />
+    <button class="button">from number to text</button>
+    <div class="uitkomst"></div>
+    ​
+    <script>
+      const nummer = [
+        '',
+        'een',
+        'twee',
+        'drie',
+        'vier',
+        'vijf',
+        'zes',
+        'zeven',
+        'acht',
+        'negen',
+      ];
+      const uitzondering = ['elf', 'twaalf', 'dertien', 'veertien'];
+      const tientallen = [
+        '',
+        'tien',
+        'twintig',
+        'dertig',
+        'veertig',
+        'vijftig',
+        'zestig',
+        'zeventig',
+        'tachtig',
+        'negentig',
+      ];
+      const honderd = [
+        '',
+        'honderd',
+        'tweehonderd',
+        'driehonderd',
+        'vierhonderd',
+        'vijfhonderd',
+        'zeshonderd',
+        'zevenhonderd',
+        'achthonderd',
+        'negenhonderd',
+      ];
+
+      const btn = document.querySelector('.button');
+      btn.onclick = () => {
+        omzetten();
+      };
+      function omzetten() {
+        const getal = document.getElementById('input').value;
+        const honderdGetallen = Math.floor(getal / 100);
+        const tienGetallen = Math.floor((getal - honderdGetallen * 100) / 10);
+        const heleGetallen = getal - honderdGetallen * 100 - tienGetallen * 10;
+        const uitzonderingsCheck = Math.floor(getal - honderdGetallen * 100);
+        let en = 'en';
+
+        if (tienGetallen < 2 || heleGetallen === 0) {
+          en = '';
+        }
+        if (heleGetallen === 2 || heleGetallen === 3) {
+          en = 'ën';
+        }
+        if (honderdGetallen > 9) {
+          return (document.querySelector('.uitkomst').innerText =
+            'getal kan niet groter dan 3');
+        }
+        if (uitzonderingsCheck > 10 && uitzonderingsCheck < 15) {
+          let textGetal =
+            honderd[honderdGetallen] + uitzondering[uitzonderingsCheck - 11];
+          document.querySelector('.uitkomst').innerText = textGetal;
+        } else {
+          let textGetal =
+            honderd[honderdGetallen] +
+            nummer[heleGetallen] +
+            en +
+            tientallen[tienGetallen];
+          document.querySelector('.uitkomst').innerText = textGetal;
+        }
+      }
+    </script>
+    ​
+  </body>
+</html>
+​
