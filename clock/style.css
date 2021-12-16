@@ -6,95 +6,93 @@
   box-sizing: border-box;
 }
 
-.container{
+.container {
   min-width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background: #a1a1a1;
+  background: #444;
   overflow: hidden;
   font-family: 'Genos', sans-serif;
-  
 }
 
-
-.timezone{
+.timezone {
   display: block;
   text-align: center;
   font-size: 40px;
   font-style: 600;
   letter-spacing: 2px;
   color: #fff;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
   margin: 80px auto;
 }
 
-.clock_container{
+.clock_container {
   padding: 50px;
 }
 
-.clock{
+.clock {
   width: 360px;
   height: 360px;
-  border: 7px solid #a1a1a1;
+  border: 7px solid #444;
   box-shadow: -4px -4px 10px rgba(100, 100, 100, 0.5),
-      inset 4px 4px 10px rgba(9, 9, 9, 0.5),
-      inset -4px -4px 10px rgba(100, 100, 100, 0.5),
-      4px 4px 10px rgba(9, 9, 9, 0.3);
+    inset 4px 4px 10px rgba(9, 9, 9, 0.5),
+    inset -4px -4px 10px rgba(100, 100, 100, 0.5),
+    4px 4px 10px rgba(9, 9, 9, 0.3);
   border-radius: 50%;
   padding: 20px;
   margin-bottom: 110px;
 }
-.outer_clock_face{
+.outer_clock_face {
   position: relative;
   width: 100%;
   height: 100%;
   border-radius: 100%;
-  background: #a1a1a1;
+  background: #444;
   /* overflow: hidden; */
 }
-.outer_clock_face::after{
+.outer_clock_face::after {
   transform: rotate(90deg);
 }
 .outer_clock_face::before,
 .outer_clock_face::after,
-.outer_clock_face .marking{
+.outer_clock_face .marking {
   content: '';
   position: absolute;
   width: 5px;
   height: 100%;
   background: #ea01ff;
   z-index: 0;
-  left:49%;
+  left: 49%;
 }
-.outer_clock_face .marking{
+.outer_clock_face .marking {
   background: #f5f5f5;
   width: 3px;
 }
-.outer_clock_face .marking.marking_1{
+.outer_clock_face .marking.marking_1 {
   transform: rotate(30deg);
 }
-.outer_clock_face .marking.marking_2{
+.outer_clock_face .marking.marking_2 {
   transform: rotate(60deg);
 }
-.outer_clock_face .marking.marking_3{
+.outer_clock_face .marking.marking_3 {
   transform: rotate(120deg);
 }
-.outer_clock_face .marking.marking_4{
+.outer_clock_face .marking.marking_4 {
   transform: rotate(150deg);
 }
-.inner_clock_face{
+.inner_clock_face {
   position: absolute;
   top: 10%;
-  left:10%;
+  left: 10%;
   width: 80%;
   height: 80%;
-  background: #a1a1a1;
+  background: #444;
   border-radius: 100%;
   z-index: 1;
 }
-.inner_clock_face::before{
+.inner_clock_face::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -104,17 +102,17 @@
   border-radius: 18px;
   margin-left: -9px;
   margin-top: -6px;
-  background: #424242;
+  background: #790469;
   z-index: 11;
 }
 
-.hand{
+.hand {
   position: absolute;
   width: 50%;
   right: 50%;
   height: 6px;
   background: #b60f6b;
-  top:50%;
+  top: 50%;
   border-radius: 6px;
   transition: all 0.05s;
   transform-origin: 100%; /* bepaalt de oorsprong voor de transformaties */
@@ -124,14 +122,14 @@
 
 #hour_hand,
 #hour_hand_2,
-#hour_hand_3{
+#hour_hand_3 {
   width: 40%;
   z-index: 3;
 }
 
 #min_hand,
 #min_hand_2,
-#min_hand_3{
+#min_hand_3 {
   height: 3px;
   z-index: 10;
   width: 48%;
@@ -139,11 +137,11 @@
 
 #second_hand,
 #second_hand_2,
-#second_hand_3{
+#second_hand_3 {
   background: #15ff00;
   width: 50%;
   height: 2px;
-} 
+}
 
 @media (max-width: 480px) {
   .clock {
@@ -153,11 +151,9 @@
   }
 }
 @media (max-width: 600px) {
-  
   .clock {
     width: 300px;
     height: 300px;
-  
   }
 }
 @media (max-width: 768px) {
@@ -169,6 +165,5 @@
     height: 400px;
     margin: 20px auto;
     padding: 16px;
-    
   }
 }
