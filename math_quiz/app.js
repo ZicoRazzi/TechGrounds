@@ -1,16 +1,20 @@
 const container = document.getElementById('container');
 const startBtn = document.querySelector('.button');
+
+// Quiz STATE variables
 let counter = 0;
 let currentQuestion;
 let availableQuestions = [];
 let availableOptions = [];
 let correctAnswers = 0;
-// const prev = []
+
+// STARTS the quiz by creating a quiz and settings the available questions
 const startQuiz = () => {
   createQuiz();
   setAvailableQuestions();
 };
 
+//Creates a start button with an onClick handler that STARTS the quiz and requests a new question
 const startBtnHandler = () => {
   const startBtn = document.createElement('button');
   startBtn.classList.add('button');
@@ -18,6 +22,13 @@ const startBtnHandler = () => {
   container.append(startBtn);
 
   startBtn.onclick = () => {
+    // DEBUG LOGS
+    console.log('COUNTER AT start OF QUIZ => ', counter);
+    console.log('currentQuestion AT start OF QUIZ => ', currentQuestion);
+    console.log('availableQuestions AT start OF QUIZ => ', availableQuestions);
+    console.log('availableOptions AT start OF QUIZ => ', availableOptions);
+    console.log('correctAnswers AT start OF QUIZ => ', correctAnswers);
+
     startQuiz();
     getNewQuestion();
 
@@ -27,6 +38,7 @@ const startBtnHandler = () => {
 
 startBtnHandler();
 
+// START FUNCTION creates the quiz and THE UI add event listeners to buttons
 const createQuiz = () => {
   const quizContainer = document.createElement('div');
   quizContainer.classList.add('quiz_container');
@@ -42,6 +54,7 @@ const createQuiz = () => {
   buttonsHandler();
 };
 
+// Creates Title and appends to the UI
 const createTitle = () => {
   const quizContent = document.querySelector('.quiz_content');
   const quizTitle = document.createElement('div');
@@ -50,6 +63,7 @@ const createTitle = () => {
   quizContent.append(quizTitle);
 };
 
+// Creates Question Boxes and appends to the UI
 const createQuestionBox = () => {
   const quizContent = document.querySelector('.quiz_content');
   const numberOfQuestion = document.createElement('div');
@@ -60,6 +74,7 @@ const createQuestionBox = () => {
   quizContent.append(questionBox);
 };
 
+// Creates Answer Boxes and appends to the UI
 const createAnswerBoxes = () => {
   const quizContent = document.querySelector('.quiz_content');
   const answerBoxes = document.createElement('div');
@@ -67,6 +82,7 @@ const createAnswerBoxes = () => {
   quizContent.append(answerBoxes);
 };
 
+// Button Handling Functions UI and LOGIC
 const buttonsHandler = () => {
   const quizContainer = document.querySelector('.quiz_container');
   const prevButton = document.createElement('button');
@@ -78,39 +94,63 @@ const buttonsHandler = () => {
   nextButton.classList.add('button', 'next_button');
   nextButton.innerText = 'Volgende';
   quizContainer.append(nextButton);
+
+  // On NEXT click button logic
   nextButton.onclick = () => {
-    console.log('clicked');
-    next();
-  };
-  prevButton.onclick = () => {
-    counter--;
-    document.querySelector('.answer_boxes').innerHTML = '';
-    getNewQuestion();
-  };
-  function next() {
+    counter++;
+    // DEBUG LOGS
+    console.log('COUNTER IN next CLICK => ', counter);
+    console.log('currentQuestion IN next CLICK => ', currentQuestion);
+    console.log('availableQuestions IN next CLICK => ', availableQuestions);
+    console.log('availableOptionsTER IN next CLICK => ', availableOptions);
+    console.log('correctAnswers IN next CLICK => ', correctAnswers);
+
+    console.log('COUNTER', counter, 'QUESTION LENGTH', questions.length);
     if (counter === questions.length) {
       quizOver();
     } else {
+      // removes all the questions?
       document.querySelector('.answer_boxes').innerHTML = '';
       getNewQuestion();
     }
-  }
+  };
+  // On PREVIOUS click button logic
+  prevButton.onclick = () => {
+    // Checkt of je onder de 0 gaat in je vragen array zo ja returned de functie zodat je niet meer
+    // kan klikken.
+    if (counter <= 0) return;
+
+    counter--;
+    document.querySelector('.answer_boxes').innerHTML = '';
+
+    // DEBUG LOGS
+    console.log('COUNTER IN previous CLICK => ', counter);
+    console.log('currentQuestion IN previous CLICK => ', currentQuestion);
+    console.log('availableQuestions IN previous CLICK => ', availableQuestions);
+    console.log('availableOptionsTER IN previous CLICK => ', availableOptions);
+    console.log('correctAnswers IN previous OF CLICK => ', correctAnswers);
+
+    getNewQuestion();
+  };
 };
 
 const getNewQuestion = () => {
+  // QUESTION NUMBER ON THE UI
   const numberOfQuestion = document.querySelector('.number_of_all_questions');
+
+  // MAIN QUIZ QUESTION
   const questionBox = document.querySelector('.quiz_question');
+
+  // CONTAINER FOR THE ANSWERS! => not answers themself
   const answerBoxes = document.querySelector('.answer_boxes');
 
   numberOfQuestion.innerText = counter + 1 + ' / ' + questions.length;
-  const questionIndex =
-    availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
+
+  const questionIndex = availableQuestions[counter];
+
   currentQuestion = questionIndex;
+
   questionBox.innerText = currentQuestion.question;
-  //get the position of 'questionIndex' from the availableQuestion Array
-  const index1 = availableQuestions.indexOf(questionIndex);
-  //remove the 'questionIndex' from the availableQuestion Array to prevent repeating
-  availableQuestions.splice(index1, 1);
 
   //get the length of options
   const optionLen = currentQuestion.options.length;
@@ -131,7 +171,6 @@ const getNewQuestion = () => {
     answerOptions.id = optionIndex;
     answerOptions.setAttribute('onclick', 'getResult(this)');
   }
-  counter++;
 };
 
 function setAvailableQuestions() {

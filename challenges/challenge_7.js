@@ -9,7 +9,7 @@ const button = document.querySelector('button');
 
 const inputs = document.querySelectorAll('input');
 console.log(inputs);
-const arrayOfInputs = [...inputs]; //verandert noodlist in array
+const arrayOfInputs = [...inputs]; //verandert nodelist in array
 arrayOfInputs.forEach((input) => {
   input.addEventListener('change', (evt) => {
     const inputType = evt.target.dataset.info;
