@@ -190,3 +190,52 @@
 .already_answered {
   pointer-events: none;
 }
+
+@media (max-width: 480px) {
+  .quiz_container {
+    height: 100%;
+  }
+  .quiz_content {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .quiz_title,
+  .number_of_all_questions {
+    font-size: 28px;
+  }
+  .quiz_question {
+    padding: 10px;
+    font-size: 28px;
+    height: auto;
+  }
+
+  .answer {
+    height: 30px;
+    font-size: 20px;
+  }
+  .answer:nth-child(1)::after,
+  .answer:nth-child(2)::after,
+  .answer:nth-child(3)::after,
+  .answer:nth-child(4)::after,
+  .answer:nth-child(5)::after {
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border: 10px solid #088181;
+  }
+  .button {
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+  }
+  .prev_button,
+  .next_button {
+    margin: 10px;
+  }
+
+  .end_result {
+    margin-bottom: 50px;
+    font-size: 16px;
+  }
+}
