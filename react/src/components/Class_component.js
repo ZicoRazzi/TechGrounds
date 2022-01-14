@@ -14,7 +14,6 @@ export default class Class_component extends Component {
   render() {
     return (
       <div>
-        <h2>Opdracht 1</h2>
         <h1>Hello Class {this.state.title}</h1>
         <input
           onInput={(evt) => this.inputHandler(evt.target.value)}

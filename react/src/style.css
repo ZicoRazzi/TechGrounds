@@ -1,0 +1,79 @@
+body {
+  background-color: #ccc;
+  padding: 20px;
+}
+input {
+  background-color: rgb(37, 37, 37);
+  color: #fff;
+  width: 300px;
+  height: 50px;
+  font-size: 30px;
+  padding: 10px;
+  border: none;
+}
+button {
+  display: block;
+  background-color: rgb(37, 37, 37);
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 20px;
+  margin-top: 50px;
+  border: none;
+  cursor: pointer;
+}
+h2 {
+  color: orangered;
+}
+.link {
+  text-decoration: none;
+  color: orangered;
+  cursor: pointer;
+}
+li {
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+.count_display {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: orangered;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.products_input {
+  margin-bottom: 50px;
+}
+.count_display {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: orangered;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80px 20px;
+}
+.count_container {
+  display: flex;
+  gap: 10px;
+}
+.count_btn {
+  display: block;
+  background-color: rgb(37, 37, 37);
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 20px;
+
+  border: none;
+  cursor: pointer;
+}
