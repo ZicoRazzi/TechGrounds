@@ -13,10 +13,8 @@ export default function Opdracht_2() {
     <div>
       <Home />
 
-      <Class_component_2 title2={title} callback={setTitleHandler} />
-      <input value={title} onChange={(e) => setTitleHandler(e.target.value)} />
-      <Function_component_2 title2={title} />
-      <input value={title} onChange={(e) => setTitleHandler(e.target.value)} />
+      <Class_component_2 title={title} setTitleHandler={setTitleHandler} />
+      <Function_component_2 title={title} setTitleHandler={setTitleHandler} />
     </div>
   );
 }
