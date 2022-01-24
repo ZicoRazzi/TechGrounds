@@ -35,6 +35,11 @@ export default function NavMenu() {
             Increment &amp; Decrement
           </NavLink>
         </li>
+        <li>
+          <NavLink className="link" to="/Accordion">
+            Accordion
+          </NavLink>
+        </li>
       </ul>
     </div>
   );

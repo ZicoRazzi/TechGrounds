@@ -8,7 +8,7 @@ export default function Opdracht_1() {
   return (
     <div>
       <Home />
-
+      
       <Class_component />
       <Function_component />
     </div>
