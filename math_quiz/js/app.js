@@ -151,7 +151,7 @@ function checkCorrectness() {
     // The user HAS answered the question => disable the click events
     unClickableOptions();
 
-    // [...answers] => verandert de answers DOM NODELIST hierboven naar een JavaScript array => dit heet 'array destructuring' is heel handig om dingen zoals kopies van array of array achtige datastructuren te maken.
+    // [...answers] => verandert de answers DOM NODELIST hierboven naar een JavaScript array => dit heet 'spread operator' is heel handig om dingen zoals kopies van array of array achtige datastructuren te maken.
 
     [...answers].forEach((answer) => {
       // Deze loop kijkt naar iedere answer in de currentQuestion
