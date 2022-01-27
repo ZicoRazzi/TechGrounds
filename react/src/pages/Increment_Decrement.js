@@ -2,7 +2,7 @@ import React from 'react';
 import Home from '../pages/Home';
 import CountButton from '../components/CountButton';
 
-export default function () {
+export default function Increment_Decrement() {
   return (
     <div>
       <Home />

@@ -40,6 +40,11 @@ export default function NavMenu() {
             Accordion
           </NavLink>
         </li>
+        <li>
+          <NavLink className="link" to="/ToDo_Class">
+            To Do
+          </NavLink>
+        </li>
       </ul>
     </div>
   );
