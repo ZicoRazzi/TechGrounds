@@ -42,7 +42,12 @@ export default function NavMenu() {
         </li>
         <li>
           <NavLink className="link" to="/ToDo_Class">
-            To Do
+            To Do (class)
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className="link" to="/ToDo_Function">
+            To Do (func)
           </NavLink>
         </li>
       </ul>

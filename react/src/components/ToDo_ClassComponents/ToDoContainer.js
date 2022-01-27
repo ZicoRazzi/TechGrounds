@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import ToDoList from './ToDo_ClassComponents/ToDoList';
-import ToDoHeader from './ToDo_ClassComponents/ToDoHeader';
-import ToDoInput from './ToDo_ClassComponents/ToDoInput';
+import ToDoList from './ToDoList';
+import ToDoHeader from './ToDoHeader';
+import ToDoInput from './ToDoInput';
 import { v4 as uuidv4 } from 'uuid';
 
 export default class ToDoComp extends Component {
@@ -62,6 +62,7 @@ export default class ToDoComp extends Component {
       });
     }
   }
+
   render() {
     return (
       <div className="container">

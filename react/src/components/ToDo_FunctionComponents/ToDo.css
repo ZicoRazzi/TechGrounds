@@ -1,0 +1,82 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 24px;
+  color: #5b5b5b;
+}
+.inner {
+  width: 100%;
+  padding: 8rem 10px 4rem;
+}
+.form_container {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  border-radius: calc(0.5 * 100px);
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.38);
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+}
+.input_text {
+  font-size: 1rem;
+  font-weight: 400;
+  width: 85%;
+  padding-right: 5px;
+  padding-left: 20px;
+  border-radius: calc(0.5 * 100px);
+}
+.submit_button {
+  background: transparent;
+  color: #5b5b5b;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.38);
+  text-transform: capitalize;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 10px;
+  border: 2px solid #5b5b5b;
+  border-radius: calc(0.5 * 100px);
+  margin-bottom: 40px;
+}
+
+.input_text,
+.submit_button {
+  height: 45px;
+  outline: none;
+}
+.todo_list {
+  width: 600px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: row;
+}
+.delete_button {
+  background: transparent;
+  color: #5b5b5b;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.38);
+  text-transform: capitalize;
+  cursor: pointer;
+  font-weight: 600;
+  height: 45px;
+  outline: none;
+  border: 2px solid #5b5b5b;
+  border-radius: calc(0.5 * 100px);
+  margin-top: 20px;
+}
+.checkbox {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: none;
+  margin-left: 20px;
+}
+.submit_button svg {
+  color: darkcyan;
+  font-size: 20px;
+  margin-top: 2px;
+}

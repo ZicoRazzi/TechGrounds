@@ -7,6 +7,7 @@ import Use_Effect_API from './pages/Use_Effect_API';
 import Increment_Decrement from './pages/Increment_Decrement';
 import Accordion from './pages/Accordion';
 import ToDo_Class from './pages/ToDo_Class';
+import ToDo_Function from './pages/ToDo_Function';
 import Home from './pages/Home';
 
 import './style.css';
@@ -22,6 +23,7 @@ function App() {
         <Route path="/Increment_Decrement" element={<Increment_Decrement />} />
         <Route path="/Accordion" element={<Accordion />} />
         <Route path="/ToDo_Class" element={<ToDo_Class />} />
+        <Route path="/ToDo_Function" element={<ToDo_Function />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/" element={<Home />} />
       </Routes>
